@@ -10,6 +10,7 @@
 * courses (Korean)
 * projects
 * talks
+* pinned tweets
 
 ### /en
 * projects
