@@ -6,7 +6,7 @@
 	export let description: string;
 </script>
 
-<div class="flex flex-row items-center gap-4">
+<div class="flex flex-row items-center gap-4 sm:gap-16">
 	<div>
 		<h1 class="text-[3rem] font-bold">{name}</h1>
 		<p class="mt-1">{title}</p>
