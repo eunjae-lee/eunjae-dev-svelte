@@ -77,7 +77,7 @@
 	<a href="" class="mt-2 btn btn-ghost">모든 글 보기 →</a>
 </div>
 
-<div class="mt-16 mb-8 border-b border-base-content w-full opacity-10" />
+<div class="divider mt-16 mb-8" />
 
 <div class="w-full flex">
 	<div class="grow flex flex-col gap-4 mb-16">

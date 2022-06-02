@@ -52,7 +52,7 @@
 		</div>
 		<a
 			href="/"
-			class="hidden md:inline-flex btn btn-ghost normal-case text-xl opacity-75 hover:opacity-100"
+			class="hidden md:inline-flex btn btn-ghost normal-case text-xl opacity-25 hover:opacity-75"
 			>{home}</a
 		>
 	</div>
@@ -82,6 +82,6 @@
 <style>
 	ul.menu li a,
 	ul.menu li button {
-		@apply opacity-75 hover:opacity-100;
+		@apply opacity-25 hover:opacity-75;
 	}
 </style>
