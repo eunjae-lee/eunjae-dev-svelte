@@ -53,23 +53,23 @@
 				tabindex="0"
 				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-48"
 			>
-				<li><a class="opacity-25 hover:opacity-75" href="/">{home}</a></li>
+				<li><a class="opacity-50 hover:opacity-75" href="/">{home}</a></li>
 				{#each menuItems as item (item.label)}
 					<li>
-						<a sveltekit:prefetch class="opacity-25 hover:opacity-75" href={item.href}
+						<a sveltekit:prefetch class="opacity-50 hover:opacity-75" href={item.href}
 							>{item.label}</a
 						>
 					</li>
 				{/each}
 				<li tabindex="0">
-					<button class="opacity-25 hover:opacity-75 justify-between" title="Choose theme">
+					<button class="opacity-50 hover:opacity-75 justify-between" title="Choose theme">
 						Theme
 					</button>
 					<ul class="p-2 bg-base-200">
 						<li>
 							<button
 								type="button"
-								class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+								class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/en"
 								on:click={() => setTheme('light')}>Light</button
 							>
@@ -77,7 +77,7 @@
 						<li>
 							<button
 								type="button"
-								class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+								class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/ko"
 								on:click={() => setTheme('dark')}>Dark</button
 							>
@@ -86,7 +86,7 @@
 							<button
 								type="button"
 								class={`${
-									currentTheme === 'system' ? 'opacity-75' : 'opacity-25'
+									currentTheme === 'system' ? 'opacity-75' : 'opacity-50'
 								} hover:opacity-75`}
 								href="/ko"
 								on:click={() => setTheme('system')}>System</button
@@ -95,21 +95,21 @@
 					</ul>
 				</li>
 				<li tabindex="0">
-					<button class="opacity-25 hover:opacity-75 justify-between" title="Choose language">
+					<button class="opacity-50 hover:opacity-75 justify-between" title="Choose language">
 						Language
 					</button>
 					<ul class="p-2 bg-base-200">
 						<li>
 							<a
 								sveltekit:prefetch
-								class={`${isEnglish ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+								class={`${isEnglish ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/en">English</a
 							>
 						</li>
 						<li>
 							<a
 								sveltekit:prefetch
-								class={`${isEnglish ? 'opacity-25' : 'opacity-75'} hover:opacity-75`}
+								class={`${isEnglish ? 'opacity-50' : 'opacity-75'} hover:opacity-75`}
 								href="/ko">Korean</a
 							>
 						</li>
@@ -119,7 +119,7 @@
 		</div>
 		<a
 			href="/"
-			class="hidden md:inline-flex btn btn-ghost normal-case text-xl opacity-25 hover:opacity-75"
+			class="hidden md:inline-flex btn btn-ghost normal-case text-xl opacity-50 hover:opacity-75"
 			>{home}</a
 		>
 	</div>
@@ -127,7 +127,7 @@
 		<ul class="menu menu-horizontal p-0">
 			{#each menuItems as item (item.label)}
 				<li>
-					<a sveltekit:prefetch class="opacity-25 hover:opacity-75" href={item.href}>{item.label}</a
+					<a sveltekit:prefetch class="opacity-50 hover:opacity-75" href={item.href}>{item.label}</a
 					>
 				</li>
 			{/each}
@@ -137,7 +137,7 @@
 				<label
 					title="Choose theme"
 					tabindex="0"
-					class="opacity-25 hover:opacity-75 btn m-1 btn-ghost"
+					class="opacity-50 hover:opacity-75 btn m-1 btn-ghost"
 				>
 					<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"
 						><path
@@ -160,21 +160,21 @@
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+							class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('light')}>Light</button
 						>
 					</li>
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+							class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('dark')}>Dark</button
 						>
 					</li>
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'system' ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+							class={`${currentTheme === 'system' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('system')}>System</button
 						>
 					</li>
@@ -185,7 +185,7 @@
 				<label
 					title="Choose language"
 					tabindex="0"
-					class="opacity-25 hover:opacity-75 btn m-1 btn-ghost"
+					class="opacity-50 hover:opacity-75 btn m-1 btn-ghost"
 					>{#if isEnglish}
 						<KorEng />
 					{:else}
@@ -196,14 +196,14 @@
 					<li>
 						<a
 							sveltekit:prefetch
-							class={`${isEnglish ? 'opacity-75' : 'opacity-25'} hover:opacity-75 justify-center`}
+							class={`${isEnglish ? 'opacity-75' : 'opacity-50'} hover:opacity-75 justify-center`}
 							href="/en">English</a
 						>
 					</li>
 					<li>
 						<a
 							sveltekit:prefetch
-							class={`${isEnglish ? 'opacity-25' : 'opacity-75'} hover:opacity-75 justify-center`}
+							class={`${isEnglish ? 'opacity-50' : 'opacity-75'} hover:opacity-75 justify-center`}
 							href="/ko">Korean</a
 						>
 					</li>

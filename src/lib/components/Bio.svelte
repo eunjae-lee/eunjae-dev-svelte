@@ -6,17 +6,17 @@
 	export let description: string;
 </script>
 
-<div class="flex flex-row items-center gap-4 sm:gap-16">
+<div class="flex flex-col sm:flex-row items-center gap-8 sm:gap-16">
 	<div>
-		<h1 class="text-[3rem] font-bold">{name}</h1>
-		<p class="mt-1">{title}</p>
+		<h1 class="text-4xl sm:text-[3rem] font-bold">{name}</h1>
+		<p class="mt-2 sm:mt-4">{title}</p>
 		<p class="mt-4 opacity-75">
 			{description}
 		</p>
 	</div>
 	<div class="avatar drop-shadow-xl">
-		<div class="w-48 rounded-full">
-			<Image src="profile.jpeg" />
+		<div class="w-48">
+			<Image src="profile.jpeg" class="rounded-full" />
 		</div>
 	</div>
 </div>

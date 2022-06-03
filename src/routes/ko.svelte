@@ -55,7 +55,7 @@
 
 <div class="mt-4 p-6">
 	<Bio
-		name="이은재"
+		name="이은재입니다 👋🏼"
 		title="한국에서 자랐고, 싱가포르를 거쳐 프랑스에 자리 잡았습니다."
 		description="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
@@ -106,8 +106,8 @@
 
 <div class="divider mt-16 mb-8" />
 
-<div class="w-full flex">
-	<div class="grow flex flex-col gap-4 mb-16">
+<div class="w-full flex justify-evenly sm:justify-start">
+	<div class="sm:grow sm:ml-2 flex flex-col gap-4 mb-16">
 		{#each footerLinkGroup1 as item (item.href)}
 			<a
 				rel="noopener noreferrer"
@@ -117,7 +117,7 @@
 			>
 		{/each}
 	</div>
-	<div class="grow flex flex-col gap-4 mb-16">
+	<div class="sm:grow flex flex-col gap-4 mb-16">
 		{#each footerLinkGroup2 as item (item.href)}
 			<a
 				rel="noopener noreferrer"
