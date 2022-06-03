@@ -77,11 +77,14 @@
 			description="JSConf KR 2020 에서 했던 발표로, 오픈 소스 라이브러리를 배포하기 위한 작업 흐름과 라이브러리를 소개합니다."
 		/>
 	</div>
-	<h2 class="mt-24 text-2xl font-bold">최근 글</h2>
+	<h2 class="mt-24 text-2xl font-bold">추천 글</h2>
 	<ul class="mt-4">
 		{#each posts as post (post.path)}
 			<li class="mt-2">
-				<a sveltekit:prefetch class="flex items-center" href={post.path}
+				<a
+					sveltekit:prefetch
+					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+					href={post.path}
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6 opacity-50"
@@ -101,7 +104,7 @@
 			</li>
 		{/each}
 	</ul>
-	<a sveltekit:prefetch href="/posts-ko" class="mt-2 btn btn-ghost">모든 글 보기 →</a>
+	<a sveltekit:prefetch href="/posts-ko" class="-ml-3 mt-2 btn btn-ghost">모든 글 보기 →</a>
 </div>
 
 <div class="divider mt-16 mb-8" />

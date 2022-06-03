@@ -1,14 +1,26 @@
 <script>
 	import { onMount } from 'svelte';
-
+	import { theme } from '$lib/stores';
 	import '../app.css';
+	import { setTheme } from '$lib/helpers';
 
+	// onMount(() => {
+	// 	const theme = localStorage.getItem('theme');
+	// 	if (theme === 'light' || theme === 'dark' || theme === 'system') {
+	// 		// @ts-ignore
+	// 		document.querySelector('html').setAttribute('data-theme', theme);
+	// 	}
+	// });
 	onMount(() => {
-		const theme = localStorage.getItem('theme');
-		if (theme === 'light' || theme === 'dark' || theme === 'system') {
-			// @ts-ignore
-			document.querySelector('html').setAttribute('data-theme', theme);
+		if ($theme === undefined) {
+			const themeFromLocalStorage = localStorage.getItem('theme');
+			if (['light', 'dark', 'system'].includes(themeFromLocalStorage)) {
+				$theme = themeFromLocalStorage;
+			} else {
+				$theme = 'system';
+			}
 		}
+		setTheme($theme);
 	});
 </script>
 

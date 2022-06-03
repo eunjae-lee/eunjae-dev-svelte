@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import type { Theme } from '$lib/types';
+	import { theme } from '$lib/stores';
+	import { setTheme } from '$lib/helpers';
 
 	import EngKor from './EngKor.svelte';
 	import KorEng from './KorEng.svelte';
 
 	export let currentLang: 'en' | 'ko';
-
-	type Theme = 'light' | 'dark' | 'system';
 
 	let isEnglish = currentLang === 'en';
 	let home: string = isEnglish ? 'Home' : '처음으로';
@@ -14,23 +14,6 @@
 		// { label: 'Item1', href: '/' },
 		{ label: isEnglish ? 'Uses' : '사용하는 것들', href: '/uses' },
 	];
-	let currentTheme: Theme;
-
-	onMount(() => {
-		currentTheme = (document.querySelector('html')!.getAttribute('data-theme') ||
-			'system') as Theme;
-	});
-
-	function setTheme(theme: 'light' | 'dark' | 'system') {
-		const html = document.querySelector('html')!;
-		if (theme === 'system') {
-			html.removeAttribute('data-theme');
-		} else {
-			html.setAttribute('data-theme', theme);
-		}
-		localStorage.setItem('theme', theme);
-		currentTheme = theme;
-	}
 </script>
 
 <div class="navbar">
@@ -69,7 +52,7 @@
 						<li>
 							<button
 								type="button"
-								class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
+								class={`${$theme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/en"
 								on:click={() => setTheme('light')}>Light</button
 							>
@@ -77,7 +60,7 @@
 						<li>
 							<button
 								type="button"
-								class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
+								class={`${$theme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/ko"
 								on:click={() => setTheme('dark')}>Dark</button
 							>
@@ -85,9 +68,7 @@
 						<li>
 							<button
 								type="button"
-								class={`${
-									currentTheme === 'system' ? 'opacity-75' : 'opacity-50'
-								} hover:opacity-75`}
+								class={`${$theme === 'system' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 								href="/ko"
 								on:click={() => setTheme('system')}>System</button
 							>
@@ -160,21 +141,21 @@
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
+							class={`${$theme === 'light' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('light')}>Light</button
 						>
 					</li>
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
+							class={`${$theme === 'dark' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('dark')}>Dark</button
 						>
 					</li>
 					<li>
 						<button
 							type="button"
-							class={`${currentTheme === 'system' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
+							class={`${$theme === 'system' ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
 							on:click={() => setTheme('system')}>System</button
 						>
 					</li>

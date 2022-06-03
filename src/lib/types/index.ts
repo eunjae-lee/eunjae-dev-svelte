@@ -6,3 +6,5 @@ export type PostMeta = {
 	};
 	path: string;
 };
+
+export type Theme = 'light' | 'dark' | 'system';
