@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Bio from '$lib/components/Bio.svelte';
 	import LinkedCard from '$lib/components/LinkedCard.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';

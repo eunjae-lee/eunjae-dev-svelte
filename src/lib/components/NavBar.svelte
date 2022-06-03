@@ -55,7 +55,11 @@
 			>
 				<li><a class="opacity-25 hover:opacity-75" href="/">{home}</a></li>
 				{#each menuItems as item (item.label)}
-					<li><a class="opacity-25 hover:opacity-75" href={item.href}>{item.label}</a></li>
+					<li>
+						<a sveltekit:prefetch class="opacity-25 hover:opacity-75" href={item.href}
+							>{item.label}</a
+						>
+					</li>
 				{/each}
 				<li tabindex="0">
 					<button class="opacity-25 hover:opacity-75 justify-between" title="Choose theme">
@@ -96,13 +100,17 @@
 					</button>
 					<ul class="p-2 bg-base-200">
 						<li>
-							<a class={`${isEnglish ? 'opacity-75' : 'opacity-25'} hover:opacity-75`} href="/en"
-								>English</a
+							<a
+								sveltekit:prefetch
+								class={`${isEnglish ? 'opacity-75' : 'opacity-25'} hover:opacity-75`}
+								href="/en">English</a
 							>
 						</li>
 						<li>
-							<a class={`${isEnglish ? 'opacity-25' : 'opacity-75'} hover:opacity-75`} href="/ko"
-								>Korean</a
+							<a
+								sveltekit:prefetch
+								class={`${isEnglish ? 'opacity-25' : 'opacity-75'} hover:opacity-75`}
+								href="/ko">Korean</a
 							>
 						</li>
 					</ul>
@@ -118,7 +126,10 @@
 	<div class="navbar-end hidden md:flex">
 		<ul class="menu menu-horizontal p-0">
 			{#each menuItems as item (item.label)}
-				<li><a class="opacity-25 hover:opacity-75" href={item.href}>{item.label}</a></li>
+				<li>
+					<a sveltekit:prefetch class="opacity-25 hover:opacity-75" href={item.href}>{item.label}</a
+					>
+				</li>
 			{/each}
 
 			<li class="dropdown dropdown-end">
@@ -184,12 +195,14 @@
 				<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-28">
 					<li>
 						<a
+							sveltekit:prefetch
 							class={`${isEnglish ? 'opacity-75' : 'opacity-25'} hover:opacity-75 justify-center`}
 							href="/en">English</a
 						>
 					</li>
 					<li>
 						<a
+							sveltekit:prefetch
 							class={`${isEnglish ? 'opacity-25' : 'opacity-75'} hover:opacity-75 justify-center`}
 							href="/ko">Korean</a
 						>
