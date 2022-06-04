@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	export async function load({ fetch }) {
+	export async function load({ fetch }: LoadEvent) {
 		const response = await fetch('/posts-ko', {
 			headers: {
 				accept: 'application/json',
@@ -18,40 +18,16 @@
 
 <script lang="ts">
 	import Bio from '$lib/components/Bio.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import LinkedCard from '$lib/components/LinkedCard.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { PostMeta } from '$lib/types';
+	import type { LoadEvent } from '@sveltejs/kit';
 
 	export let posts: PostMeta[];
-
-	let footerLinkGroup1 = [
-		{
-			label: 'Twitter',
-			href: 'https://twitter.com/eunjae_lee_ko',
-		},
-		{
-			label: 'GitHub',
-			href: 'https://github.com/eunjae-lee',
-		},
-		{
-			label: 'Instagram',
-			href: 'https://instagram.com/eunjae_dev',
-		},
-	];
-
-	let footerLinkGroup2 = [
-		{
-			label: 'Recent Tweets',
-			href: 'hhttps://twitter.com/search?q=(from%3Aeunjae_lee_ko)%20min_faves%3A100&src=typed_query&f=live',
-		},
-		{
-			label: 'Repository',
-			href: 'https://github.com/eunjae-lee/eunjae-dev-svelte',
-		},
-	];
 </script>
 
-<NavBar currentLang="ko" />
+<NavBar lang="ko" />
 
 <div class="mt-4 p-6">
 	<Bio
@@ -185,29 +161,32 @@
 			</ul>
 		</div>
 	</div>
+	<form
+		class="mt-24 card bg-base-100"
+		action="https://courses.eunjae.dev/email_lists/331197/subscriptions"
+		accept-charset="UTF-8"
+		method="post"
+	>
+		<div class="card-body">
+			<h2 class="card-title">사이드 프로젝트 뉴스레터를 구독하세요.</h2>
+			<p class="opacity-75">
+				비정기적으로 발행되는 뉴스레터입니다. 사이드 프로젝트를 좋아하시거나, 좋아하고 싶으신
+				분들에게 관련 소식을 전해드려요. 저의 개인적인 목표는 다양한 사이드 프로젝트로 부수입을
+				만드는 것이고, 그 과정에서 제가 접하는 좋은 정보나 제 경험을 공유하려 합니다.
+			</p>
+			<div class="mt-2 card-actions">
+				<input
+					type="email"
+					name="email"
+					placeholder="이메일"
+					class="grow input input-bordered"
+					required
+				/>
+				<button type="submit" class="btn btn-primary">구독</button>
+			</div>
+		</div>
+	</form>
 </div>
 
 <div class="divider mt-16 mb-8" />
-
-<div class="w-full flex justify-evenly sm:justify-start">
-	<div class="sm:grow sm:ml-2 flex flex-col gap-4 mb-16">
-		{#each footerLinkGroup1 as item (item.href)}
-			<a
-				rel="noopener noreferrer"
-				target="_blank"
-				class="text-sm opacity-30 hover:opacity-50"
-				href={item.href}>{item.label}</a
-			>
-		{/each}
-	</div>
-	<div class="sm:grow flex flex-col gap-4 mb-16">
-		{#each footerLinkGroup2 as item (item.href)}
-			<a
-				rel="noopener noreferrer"
-				target="_blank"
-				class="text-sm opacity-30 hover:opacity-50"
-				href={item.href}>{item.label}</a
-			>
-		{/each}
-	</div>
-</div>
+<Footer lang="ko" />

@@ -4,7 +4,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 </script>
 
-<NavBar currentLang="en" />
+<NavBar lang="en" />
 
 <div class="mt-4 p-6">
 	<Bio

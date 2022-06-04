@@ -6,9 +6,9 @@
 	import EngKor from './EngKor.svelte';
 	import KorEng from './KorEng.svelte';
 
-	export let currentLang: 'en' | 'ko';
+	export let lang: 'en' | 'ko';
 
-	let isEnglish = currentLang === 'en';
+	let isEnglish = lang === 'en';
 	let home: string = isEnglish ? 'Home' : '처음으로';
 	let menuItems = [
 		// { label: 'Item1', href: '/' },
@@ -36,7 +36,7 @@
 				tabindex="0"
 				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-200 rounded-box w-48"
 			>
-				<li><a class="opacity-50 hover:opacity-75" href="/">{home}</a></li>
+				<li><a class="opacity-50 hover:opacity-75" href={`/${lang}`}>{home}</a></li>
 				{#each menuItems as item (item.label)}
 					<li>
 						<a sveltekit:prefetch class="opacity-50 hover:opacity-75" href={item.href}
@@ -99,7 +99,7 @@
 			</ul>
 		</div>
 		<a
-			href="/"
+			href={`/${lang}`}
 			class="hidden md:inline-flex btn btn-ghost normal-case text-xl opacity-50 hover:opacity-75"
 			>{home}</a
 		>

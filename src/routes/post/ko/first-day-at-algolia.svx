@@ -1,5 +1,6 @@
 ---
 title: "감동적인 입사 첫날"
+excerpt: "내가 느꼈던 그 케어는 참 섬세하고 감동적이었다. 잘 적응할 수 있겠다는 자신감이 생겼다."
 created_at: 2019-04-29T00:00:00.000Z
 featured: true
 lang: ko

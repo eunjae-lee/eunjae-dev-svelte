@@ -1,7 +1,9 @@
 export type PostMeta = {
 	meta: {
 		title: string;
+		excerpt: string;
 		created_at: string;
+		featured?: boolean;
 		lang: 'en' | 'ko';
 	};
 	path: string;
