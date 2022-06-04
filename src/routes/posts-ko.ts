@@ -1,15 +1,15 @@
 export const get = async () => {
-	const files = import.meta.glob('./post/ko/*.svx');
+	const files = import.meta.glob('/posts/ko/**/index.svx');
 	const entries = Object.entries(files);
 
 	const allPosts = await Promise.all(
 		entries.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(1, -1 * '.svx'.length);
+			const [, postPath] = new RegExp('/posts/ko/(.*)/index.svx').exec(path);
 
 			return {
 				meta: metadata,
-				path: postPath,
+				path: `/post/ko/${postPath}`,
 			};
 		})
 	);
