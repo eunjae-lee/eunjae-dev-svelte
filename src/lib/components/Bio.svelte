@@ -8,7 +8,7 @@
 
 <div class="flex flex-col sm:flex-row items-center gap-8 sm:gap-16">
 	<div>
-		<h1 class="text-4xl sm:text-[3rem] font-bold">{name}</h1>
+		<h1 class="text-4xl sm:text-[3rem] font-extrabold">{name}</h1>
 		<p class="mt-2 sm:mt-4">{title}</p>
 		<p class="mt-4 opacity-75">
 			{description}
@@ -16,7 +16,7 @@
 	</div>
 	<div class="avatar drop-shadow-xl">
 		<div class="w-48">
-			<Image src="profile.jpeg" class="rounded-full" />
+			<Image src="profile.png" class="rounded-full" />
 		</div>
 	</div>
 </div>
