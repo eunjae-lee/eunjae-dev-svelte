@@ -15,6 +15,7 @@
 			<p class="mt-2 text-sm opacity-75">
 				{description}
 			</p>
+			<div class="mt-2"><slot /></div>
 		</div>
 	</a>
 </div>
