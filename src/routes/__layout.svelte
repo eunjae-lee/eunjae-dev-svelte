@@ -9,7 +9,7 @@
 			const themeFromLocalStorage = localStorage.getItem('theme');
 			if (themeFromLocalStorage && ['light', 'dark', 'system'].includes(themeFromLocalStorage)) {
 				// @ts-ignore
-				theme = themeFromLocalStorage;
+				$theme = themeFromLocalStorage;
 			} else {
 				$theme = 'system';
 			}

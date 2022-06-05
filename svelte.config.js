@@ -7,14 +7,26 @@ import { mdsvex } from 'mdsvex';
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [image(), mdsvex({
-		layout: {
-			_: "./src/layouts/Blog.svelte"
-		}
-	}), preprocess({ postcss: true })],
+	preprocess: [
+		image(),
+		mdsvex({
+			layout: {
+				_: './src/layouts/Blog.svelte',
+			},
+		}),
+		preprocess({ postcss: true }),
+	],
 	extensions: ['.svelte', '.svx'],
 	kit: {
 		adapter: adapter(),
+		vite: {
+			// allows vite access to ./posts
+			server: {
+				fs: {
+					allow: ['./posts'],
+				},
+			},
+		},
 	},
 };
 
