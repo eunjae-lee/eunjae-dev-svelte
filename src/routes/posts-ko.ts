@@ -1,10 +1,9 @@
-const LANG = 'ko';
-
 export const get = async ({ url }) => {
 	const slug = url.searchParams.get('slug');
 
-	const files = import.meta.glob(`/posts/${LANG}/**/index.svx`);
+	const files = import.meta.glob(`/posts/ko/**/index.svx`);
 
+	const LANG = 'ko';
 	if (slug && files[`/posts/${LANG}/${slug}/index.svx`]) {
 		const resolver = files[`/posts/${LANG}/${slug}/index.svx`];
 		return {

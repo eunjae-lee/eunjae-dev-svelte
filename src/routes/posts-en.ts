@@ -1,24 +1,40 @@
-export const get = async () => {
-    const files = import.meta.glob('./post/en/*.svx')
-    const entries = Object.entries(files)
+export const get = async ({ url }) => {
+	const slug = url.searchParams.get('slug');
 
-    const allPosts = await Promise.all(
-        entries.map(async ([path, resolver]) => {
-            const { metadata } = await resolver()
-            const postPath = path.slice(1, -1 * '.svx'.length)
+	const files = import.meta.glob(`/posts/en/**/index.svx`);
 
-            return {
-                meta: metadata,
-                path: postPath,
-            }
-        })
-    )
+	const LANG = 'en';
+	if (slug && files[`/posts/${LANG}/${slug}/index.svx`]) {
+		const resolver = files[`/posts/${LANG}/${slug}/index.svx`];
+		return {
+			body: {
+				post: {
+					meta: await resolver(),
+					path: slug,
+				},
+			},
+		};
+	}
 
-    const sortedPosts = allPosts.sort((a, b) => {
-        return new Date(b.meta.created_at).getTime() - new Date(a.meta.created_at).getTime()
-    })
+	const entries = Object.entries(files);
 
-    return {
-        body: { posts: sortedPosts }
-    }
-}
+	const allPosts = await Promise.all(
+		entries.map(async ([path, resolver]) => {
+			const { metadata } = await resolver();
+			const [, postPath] = new RegExp(`/posts/${LANG}/(.*)/index.svx`).exec(path);
+
+			return {
+				meta: metadata,
+				path: `/post/${LANG}/${postPath}`,
+			};
+		})
+	);
+
+	const sortedPosts = allPosts.sort((a, b) => {
+		return new Date(b.meta.created_at).getTime() - new Date(a.meta.created_at).getTime();
+	});
+
+	return {
+		body: { posts: sortedPosts },
+	};
+};

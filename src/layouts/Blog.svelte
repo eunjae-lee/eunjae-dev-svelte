@@ -12,8 +12,8 @@
 
 <NavBar {lang} />
 
-<div class="mt-4 p-6 prose prose-lg sm:prose-xl md:prose-2xl max-w-none">
-	<h1 class="my-8 sm:mt-16 sm:mb-4">{title}</h1>
+<div class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl max-w-none">
+	<h1 class="">{title}</h1>
 	<p class="opacity-75">{formattedDate}</p>
 	<div class="w-full h-4 sm:h-8" />
 	<slot />

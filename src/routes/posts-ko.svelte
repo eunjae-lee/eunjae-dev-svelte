@@ -17,7 +17,9 @@
 				<a href={post.path}>
 					<div>
 						<h2 class="text-2xl font-bold opacity-90 hover:opacity-100">{post.meta.title}</h2>
-						<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
+						{#if post.meta.excerpt}
+							<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
+						{/if}
 					</div>
 				</a>
 			</li>

@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-auto';
 import image from 'svelte-image';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
+import relativeImages from 'mdsvex-relative-images';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,6 +14,7 @@ const config = {
 			layout: {
 				_: './src/layouts/Blog.svelte',
 			},
+			remarkPlugins: [relativeImages],
 		}),
 		preprocess({ postcss: true }),
 	],
