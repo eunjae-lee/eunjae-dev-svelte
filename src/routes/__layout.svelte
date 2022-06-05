@@ -1,20 +1,23 @@
 <script>
 	import { onMount } from 'svelte';
 	import '../app.css';
-	// import { theme } from '$lib/stores';
-	// import { setTheme } from '$lib/helpers';
+	import { theme } from '$lib/stores';
+	import { setTheme } from '$lib/helpers';
 
-	// onMount(() => {
-	// 	if ($theme === undefined) {
-	// 		const themeFromLocalStorage = localStorage.getItem('theme');
-	// 		if (['light', 'dark', 'system'].includes(themeFromLocalStorage)) {
-	// 			$theme = themeFromLocalStorage;
-	// 		} else {
-	// 			$theme = 'system';
-	// 		}
-	// 	}
-	// 	setTheme($theme);
-	// });
+	onMount(() => {
+		if ($theme === undefined) {
+			const themeFromLocalStorage = localStorage.getItem('theme');
+			if (themeFromLocalStorage && ['light', 'dark', 'system'].includes(themeFromLocalStorage)) {
+				// @ts-ignore
+				theme = themeFromLocalStorage;
+			} else {
+				$theme = 'system';
+			}
+		}
+		if ($theme && ['light', 'dark', 'system'].includes($theme)) {
+			setTheme($theme);
+		}
+	});
 </script>
 
 <div class="flex flex-col justify-center items-start max-w-3xl mx-auto">
