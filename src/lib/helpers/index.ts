@@ -3,7 +3,7 @@ import type { Theme } from '$lib/types';
 export function setTheme(theme: Theme) {
 	const updateDom = (theme: 'dark' | 'light') => {
 		const html = document.querySelector('html');
-		html.setAttribute('data-theme', theme);
+		html.setAttribute('data-theme', theme === 'dark' ? 'halloween' : 'light');
 		// html.classList.remove('dark');
 		// html.classList.remove('light');
 		// html.classList.add(theme);

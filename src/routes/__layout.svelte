@@ -28,7 +28,7 @@
 	:global(:root[data-theme='light']) {
 		@apply bg-[#f9fafb];
 	}
-	:global(:root[data-theme='dark']) {
+	:global(:root[data-theme='halloween']) {
 		@apply bg-[#292929];
 	}
 </style>

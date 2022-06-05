@@ -44,7 +44,7 @@
 						>
 					</li>
 				{/each}
-				<!-- <li tabindex="0">
+				<li tabindex="0">
 					<button class="opacity-50 hover:opacity-75 justify-between" title="Choose theme">
 						Theme
 					</button>
@@ -74,7 +74,7 @@
 							>
 						</li>
 					</ul>
-				</li> -->
+				</li>
 				<li tabindex="0">
 					<button class="opacity-50 hover:opacity-75 justify-between" title="Choose language">
 						Language
@@ -113,7 +113,7 @@
 				</li>
 			{/each}
 
-			<!-- <li class="dropdown dropdown-end">
+			<li class="dropdown dropdown-end">
 				<label
 					title="Choose theme"
 					tabindex="0"
@@ -159,7 +159,7 @@
 						>
 					</li>
 				</ul>
-			</li> -->
+			</li>
 			<li class="dropdown dropdown-end">
 				<!-- svelte-ignore a11y-label-has-associated-control -->
 				<label
