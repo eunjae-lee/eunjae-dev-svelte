@@ -13,7 +13,8 @@ const config = {
 		mdsvex({
 			layout: {
 				_: './src/layouts/Post.svelte',
-				maison: './src/layouts/MaisonPost.svelte',
+				maison: './src/layouts/Maison.svelte',
+				'mental-health': './src/layouts/MentalHealth.svelte',
 			},
 			remarkPlugins: [relativeImages],
 		}),

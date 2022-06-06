@@ -9,17 +9,24 @@ export async function getPosts({
 }): Promise<PostMeta[]> {
 	const entries = Object.entries(files);
 
-	const allPosts = await Promise.all(
-		entries.map(async ([path, resolver]) => {
-			const { metadata } = await resolver();
-			const [, postPath] = new RegExp(`/posts/${series}/(.*)/index.svx`).exec(path);
+	const allPosts = (
+		await Promise.all(
+			entries.map(async ([path, resolver]) => {
+				const { metadata } = await resolver();
+				const [, postPath] = new RegExp(`/posts/${series}/(.*)/index.svx`).exec(path);
 
-			return {
-				meta: metadata,
-				path: `/post/${series}/${postPath}`,
-			};
-		})
-	);
+				if (!metadata) {
+					console.error('# metadata is null', path);
+					return null;
+				}
+
+				return {
+					meta: metadata,
+					path: `/post/${series}/${postPath}`,
+				};
+			})
+		)
+	).filter(Boolean);
 
 	const sortedPosts = allPosts.sort((a, b) => {
 		return new Date(b.meta.created_at).getTime() - new Date(a.meta.created_at).getTime();
