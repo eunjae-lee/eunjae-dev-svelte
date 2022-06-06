@@ -13,3 +13,13 @@ export function setTheme(theme: Theme) {
 	}
 	localStorage.setItem('theme', theme);
 }
+
+// export function isDark(theme: Theme | undefined) {
+// 	if (theme === 'dark') {
+// 		return true;
+// 	} else if (theme === 'light') {
+// 		return false;
+// 	} else {
+// 		return window.matchMedia('(prefers-color-scheme: dark)').matches;
+// 	}
+// }

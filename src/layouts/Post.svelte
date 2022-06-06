@@ -1,7 +1,7 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
-
 	import NavBar from '$lib/components/NavBar.svelte';
+	import '../prism-one-dark.css';
 
 	export let title;
 	export let created_at;
