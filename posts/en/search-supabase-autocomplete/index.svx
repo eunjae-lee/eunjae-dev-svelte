@@ -136,6 +136,3 @@ return {
 	body: { result: data },
 }
 ```
-
-See it in action → [https://eunjae.quill.so/search](https://eunjae.dev/search)
-
