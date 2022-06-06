@@ -12,7 +12,8 @@ const config = {
 		image(),
 		mdsvex({
 			layout: {
-				_: './src/layouts/Blog.svelte',
+				_: './src/layouts/Post.svelte',
+				maison: './src/layouts/MaisonPost.svelte',
 			},
 			remarkPlugins: [relativeImages],
 		}),

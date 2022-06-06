@@ -2,6 +2,7 @@
 title: "Okay, let's get started."
 created_at: 2020-07-25T00:00:00.000Z
 lang: en
+layout: maison
 ---
 
 It's been a year and half since my wife and I have moved to France. In the beginning of this year, we've sold an apartment we had in Korea. It gives us some money to invest on something. We were interested in real estate. I made an appointment with my bank for consultation, and... covid-19 happened.
