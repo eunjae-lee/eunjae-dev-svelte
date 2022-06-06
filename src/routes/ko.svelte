@@ -27,6 +27,35 @@
 	export let posts: PostMeta[];
 </script>
 
+<svelte:head>
+	<title>이은재입니다</title>
+	<meta
+		name="description"
+		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+	/>
+	<meta name="author" content="이은재" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://eunjae.dev/ko" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="이은재" />
+	<meta
+		property="og:description"
+		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+	/>
+	<!-- <meta property="og:image" content={ogImage} /> -->
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://eunjae.dev/ko" />
+	<meta name="twitter:title" content="이은재" />
+	<meta
+		name="twitter:description"
+		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+	/>
+	<!-- <meta name="twitter:image" content={ogImage} /> -->
+</svelte:head>
+
 <NavBar lang="ko" />
 
 <div class="mt-4 p-6">

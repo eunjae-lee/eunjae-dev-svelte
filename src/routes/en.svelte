@@ -27,6 +27,35 @@
 	export let posts: PostMeta[];
 </script>
 
+<svelte:head>
+	<title>Eunjae Lee</title>
+	<meta
+		name="description"
+		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+	/>
+	<meta name="author" content="Eunjae Lee" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://eunjae.dev/en" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Eunjae Lee" />
+	<meta
+		property="og:description"
+		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+	/>
+	<!-- <meta property="og:image" content={ogImage} /> -->
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://eunjae.dev/en" />
+	<meta name="twitter:title" content="Eunjae Lee" />
+	<meta
+		name="twitter:description"
+		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+	/>
+	<!-- <meta name="twitter:image" content={ogImage} /> -->
+</svelte:head>
+
 <NavBar lang="en" />
 
 <div class="mt-4 p-6">

@@ -13,16 +13,17 @@ export async function getPosts({
 		await Promise.all(
 			entries.map(async ([path, resolver]) => {
 				const { metadata } = await resolver();
-				const [, postPath] = new RegExp(`/posts/${series}/(.*)/index.svx`).exec(path);
+				const [, slug] = new RegExp(`/posts/${series}/(.*)/index.svx`).exec(path);
 
 				if (!metadata) {
 					console.error('# metadata is null', path);
 					return null;
 				}
 
+				const relativePath = `/post/${series}/${slug}`;
 				return {
-					meta: metadata,
-					path: `/post/${series}/${postPath}`,
+					meta: { ...metadata, path: relativePath },
+					path: relativePath,
 				};
 			})
 		)

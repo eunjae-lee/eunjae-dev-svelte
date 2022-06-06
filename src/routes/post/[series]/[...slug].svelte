@@ -7,6 +7,7 @@
 			props: {
 				component: (await import(`../../../../posts/${params.series}/${params.slug}/index.svx`))
 					.default,
+				path: `/post/${params.series}/${params.slug}`,
 			},
 		};
 	}
@@ -15,6 +16,7 @@
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
 	export let component: SvelteComponent;
+	export let path: string;
 </script>
 
-<svelte:component this={component} />
+<svelte:component this={component} {path} />
