@@ -1,4 +1,4 @@
-const REDIRECT_MAP = {
+export const REDIRECT_MAP: Record<string, string> = {
 	// shortcuts
 	'/in-paris': 'https://eunjae.podia.com/in-paris',
 	'/community': 'https://eunjae.podia.com/community',
@@ -15,11 +15,16 @@ const REDIRECT_MAP = {
 	'/maison/7': '/post/maison/7',
 	'/maison/8': '/post/maison/8',
 
+	'/mental-health': '/post/mental-health',
+	'/mental-health/starting-therapy': '/post/mental-health/starting-therapy',
+	'/mental-health/sense-of-belonging': '/post/mental-health/sense-of-belonging',
+
 	// english posts with /en prefix
 	'/post/2-years-algolia-and-france': '/post/en/2-years-algolia-and-france',
 	'/post/2021-review': '/post/en/2021-review',
 	'/post/abandoning-a-side-project': '/post/en/abandoning-a-side-project',
 	'/post/algolia-1yr': '/post/en/algolia-1yr',
+	'/post/2019-recap': '/post/en/2019-recap',
 	'/post/create-social-image-in-sanity-studio': '/post/en/create-social-image-in-sanity-studio',
 	'/post/create-social-image-using-puppeteer': '/post/en/create-social-image-using-puppeteer',
 	'/post/deploy-to-vercel-from-sanity-studio': '/post/en/deploy-to-vercel-from-sanity-studio',
@@ -33,18 +38,3 @@ const REDIRECT_MAP = {
 	'/post/search-supabase-autocomplete': '/post/en/search-supabase-autocomplete',
 	'/post/yarn-publish': '/post/en/yarn-publish',
 };
-
-export function get({ url }) {
-	if (REDIRECT_MAP[url.pathname]) {
-		return {
-			status: 307,
-			headers: {
-				location: REDIRECT_MAP[url.pathname],
-			},
-		};
-	} else {
-		return {
-			status: 404,
-		};
-	}
-}

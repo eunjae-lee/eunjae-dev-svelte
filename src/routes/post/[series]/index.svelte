@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	import type { LoadEvent } from '@sveltejs/kit';
-	export function load({ params, props }: LoadEvent) {
+	export function load({ params, props, url }: LoadEvent) {
 		const { series } = params;
 		if (series === 'mental-health') {
 			return {
