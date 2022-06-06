@@ -12,12 +12,18 @@
 
 <NavBar {lang} />
 
-<div class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl max-w-none">
+<article class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl w-full">
 	<h1 class="">{title}</h1>
 	<p class="opacity-75">{formattedDate}</p>
 	<div class="w-full h-4 sm:h-8" />
 	<slot />
-</div>
+</article>
 
 <div class="divider mt-16 mb-8" />
 <Footer lang="ko" />
+
+<style>
+	article :global(pre) {
+		@apply shadow-md;
+	}
+</style>
