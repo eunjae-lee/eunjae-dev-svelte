@@ -1,21 +1,14 @@
 <script context="module" lang="ts">
 	import type { LoadEvent } from '@sveltejs/kit';
-	export function load({ params, props, url }: LoadEvent) {
+	import { SERIES } from '../../../series';
+
+	export function load({ params, props }: LoadEvent) {
 		const { series } = params;
-		if (series === 'mental-health') {
+		if (SERIES[series]) {
 			return {
 				props: {
 					...props,
-					title: '🧘🏻‍♂️ Growing Mental Muscle',
-					description: `I want to be stronger, mentally. So let's get started. I'm putting time, money and effort. I already know this is going to be an incredible investment for my happy life.`,
-				},
-			};
-		} else if (series === 'maison') {
-			return {
-				props: {
-					...props,
-					title: '🏡 Maison',
-					description: 'This is going to be a long and difficult but exciting journey, right?',
+					...SERIES[series],
 				},
 			};
 		} else {

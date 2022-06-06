@@ -10,7 +10,7 @@ export const get = async ({ params }: RequestEvent) => {
 		files = import.meta.glob(`/posts/mental-health/**/index.svx`);
 	} else {
 		return {
-			body: { posts: [] },
+			status: 404,
 		};
 	}
 
