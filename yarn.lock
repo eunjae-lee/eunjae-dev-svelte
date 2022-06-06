@@ -452,7 +452,7 @@
     magic-string "^0.26.2"
     svelte-hmr "^0.14.12"
 
-"@tailwindcss/typography@^0.5.2":
+"@tailwindcss/typography@0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.2.tgz#24b069dab24d7a2467d01aca0dd432cb4b29f0ee"
   integrity sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==
