@@ -18,3 +18,7 @@
 
 - projects
 - talks
+
+## References
+
+- https://github.com/mvasigh/sveltekit-mdsvex-blog
