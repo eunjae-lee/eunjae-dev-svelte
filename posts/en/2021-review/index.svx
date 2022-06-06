@@ -2,6 +2,7 @@
 title: "2021 Year In Review"
 created_at: 2021-12-29T00:00:00.000Z
 lang: en
+featured: true
 ---
 
 It was a busy year. We tried to purchase a house again after [we failed last year](craftdocs://open?blockId=2A284E74-6095-471F-9334-EA91F16FB323&spaceId=66b8ce7c-b91c-0810-01dd-0a9d2259d2d0). However, the bank told us to come back later after our visa gets renewed. Ours expire in less than 2 years, and they didn't like it. That was March. Buying a house was our goal, but the fundamental goal is to improve living environment, as we love spending time home.

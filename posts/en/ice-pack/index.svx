@@ -2,6 +2,7 @@
 title: "A Guy Who Buys An Ice Pack Everyday"
 created_at: 2019-09-24T00:00:00.000Z
 lang: en
+featured: true
 ---
 
 I buy an ice pack. everyday. After work, I drop by Carrefour on my way back home and buy an ice pack. The markets near my home don't have any ice packs. So I get off one station before mine and I buy it there and walk home for about 10 minutes. Every single day. How come did it happen to me?

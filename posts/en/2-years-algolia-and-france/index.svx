@@ -2,6 +2,7 @@
 title: "Two Years at Algolia and in France"
 created_at: 2021-03-03T00:00:00.000Z
 lang: en
+featured: true
 ---
 
 I'm glad it's been two years already. I'm a person who always seeks something fun and gets bored easily. I'm not bored yet at Algolia and in France. It's a good signal that I'm in a good place.

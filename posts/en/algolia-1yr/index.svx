@@ -2,6 +2,7 @@
 title: "1 Year at Algolia"
 created_at: 2020-03-03T00:00:00.000Z
 lang: en
+featured: true
 ---
 
 I cannot believe it's been already a year. I joined Algolia on 4th March 2019. I already wrote [2019 Recap](/post/en/2019-recap), so I won't go into detail about what I learned. Warning. This post is going to be a long and boring story, probably lots of venting about stuff.

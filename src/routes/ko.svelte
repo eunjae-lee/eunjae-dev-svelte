@@ -41,7 +41,7 @@
 			href="https://courses.eunjae.dev/new-job"
 			title="이직 이야기"
 			description="프랑스 회사를 다니다가 이직을 결심한 계기와 과정, 그리고 그 결과를 있는 그대로 소개합니다."
-			><div class="alert alert-info shadow-lg p-2 text-sm">
+			><div class="alert bg-primary text-primary-content shadow-lg p-2 text-sm">
 				<div class="w-full flex justify-center">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@
 				분들에게 관련 소식을 전해드려요. 저의 개인적인 목표는 다양한 사이드 프로젝트로 부수입을
 				만드는 것이고, 그 과정에서 제가 접하는 좋은 정보나 제 경험을 공유하려 합니다.
 			</p>
-			<div class="mt-2 card-actions">
+			<div class="mt-2 card-actions justify-end">
 				<input
 					type="email"
 					name="email"
@@ -182,7 +182,7 @@
 					class="grow input input-bordered"
 					required
 				/>
-				<button type="submit" class="btn btn-primary">구독</button>
+				<button type="submit" class="btn btn-primary sm:w-32">구독하기</button>
 			</div>
 		</div>
 	</form>

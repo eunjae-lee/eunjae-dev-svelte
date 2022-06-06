@@ -18,6 +18,7 @@
 
 <script lang="ts">
 	import Bio from '$lib/components/Bio.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import LinkedCard from '$lib/components/LinkedCard.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { PostMeta } from '$lib/types';
@@ -137,3 +138,6 @@
 		</div> -->
 	</div>
 </div>
+
+<div class="divider mt-16 mb-8" />
+<Footer lang="ko" />
