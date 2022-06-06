@@ -11,7 +11,7 @@
 	let isEnglish = lang === 'en';
 	let home: string = isEnglish ? 'Home' : '처음으로';
 	let menuItems = [
-		{ label: isEnglish ? 'Blog' : '블로그', href: isEnglish ? '/posts-en' : '/posts-ko' },
+		{ label: isEnglish ? 'Blog' : '블로그', href: isEnglish ? '/post/en' : '/post/ko' },
 		// { label: isEnglish ? 'Uses' : '사용하는 것들', href: '/uses' },
 	];
 </script>

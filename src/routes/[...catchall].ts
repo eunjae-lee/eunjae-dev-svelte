@@ -3,6 +3,18 @@ const REDIRECT_MAP = {
 	'/in-paris': 'https://eunjae.podia.com/in-paris',
 	'/community': 'https://eunjae.podia.com/community',
 
+	'/posts-en': '/post/en',
+	'/posts-ko': '/post/ko',
+	'/maison': '/post/maison',
+	'/maison/1': '/post/maison/1',
+	'/maison/2': '/post/maison/2',
+	'/maison/3': '/post/maison/3',
+	'/maison/4': '/post/maison/4',
+	'/maison/5': '/post/maison/5',
+	'/maison/6': '/post/maison/6',
+	'/maison/7': '/post/maison/7',
+	'/maison/8': '/post/maison/8',
+
 	// english posts with /en prefix
 	'/post/2-years-algolia-and-france': '/post/en/2-years-algolia-and-france',
 	'/post/2021-review': '/post/en/2021-review',

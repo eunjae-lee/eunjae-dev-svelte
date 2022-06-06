@@ -1,13 +1,12 @@
 <script context="module" lang="ts">
 	import type { LoadEvent } from '@sveltejs/kit';
 
-	const LANG = 'en';
-
 	export async function load({ fetch, params }: LoadEvent) {
 		return {
 			status: 200,
 			props: {
-				component: (await import(`../../../../posts/${LANG}/${params.slug}/index.svx`)).default,
+				component: (await import(`../../../../posts/${params.series}/${params.slug}/index.svx`))
+					.default,
 			},
 		};
 	}

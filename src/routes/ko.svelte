@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
 	export async function load({ fetch }: LoadEvent) {
-		const response = await fetch('/posts-ko', {
+		const response = await fetch('/post/ko', {
 			headers: {
 				accept: 'application/json',
 			},
@@ -127,7 +127,7 @@
 					</li>
 				{/each}
 			</ul>
-			<a sveltekit:prefetch href="/posts-ko" class="-ml-3 mt-2 btn btn-ghost">모든 글 보기 →</a>
+			<a sveltekit:prefetch href="/post/ko" class="-ml-3 mt-2 btn btn-ghost">모든 글 보기 →</a>
 		</div>
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">컨퍼런스 톡</h2>

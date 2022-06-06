@@ -4,10 +4,6 @@
 	const LANG = 'ko';
 
 	export async function load({ fetch, params }: LoadEvent) {
-		const response = await fetch(`/posts-${LANG}?slug=${encodeURIComponent(params.slug)}`, {
-			headers: { accept: 'application/json' },
-		});
-		const post = (await response.json()).post;
 		return {
 			status: 200,
 			props: {
