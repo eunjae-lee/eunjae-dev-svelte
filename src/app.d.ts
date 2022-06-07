@@ -10,3 +10,4 @@ declare namespace App {
 }
 
 declare module 'svelte-image';
+declare module 'reading-time/lib/reading-time.js';
