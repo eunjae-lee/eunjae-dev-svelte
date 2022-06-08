@@ -21,4 +21,5 @@
 
 ## References
 
+- https://github.com/mattjennings/sveltekit-blog-template
 - https://github.com/mvasigh/sveltekit-mdsvex-blog
