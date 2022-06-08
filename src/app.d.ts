@@ -9,5 +9,4 @@ declare namespace App {
 	// interface Stuff {}
 }
 
-declare module 'svelte-image';
 declare module 'reading-time/lib/reading-time.js';

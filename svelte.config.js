@@ -1,5 +1,4 @@
 import adapter from '@sveltejs/adapter-auto';
-import image from 'svelte-image';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
 import relativeImages from 'mdsvex-relative-images';
@@ -9,7 +8,6 @@ const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: [
-		image(),
 		mdsvex({
 			layout: {
 				_: './src/layouts/Post.svelte',
