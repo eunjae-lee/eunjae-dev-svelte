@@ -26,7 +26,7 @@
 	import type { LoadEvent } from '@sveltejs/kit';
 
 	export let posts: PostMeta[];
-	let ogImage = getOgImage({ title: 'Posts' });
+	let ogImage = getOgImage({ title: 'Eunjae Lee' });
 
 	let series = [
 		{

@@ -26,7 +26,7 @@
 	import type { LoadEvent } from '@sveltejs/kit';
 
 	export let posts: PostMeta[];
-	let ogImage = getOgImage({ title: '글 목록' });
+	let ogImage = getOgImage({ title: '이은재입니다 👋🏼' });
 </script>
 
 <svelte:head>
