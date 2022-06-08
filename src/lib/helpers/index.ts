@@ -1,9 +1,9 @@
 import type { Theme } from '$lib/types';
 
 export function getOgImage({ title }: { title: string }) {
-	return `https://og-image.eunjae.dev/**${encodeURIComponent(
+	return `https://og-image.eunjae.dev/${encodeURIComponent(
 		title
-	)}**?theme=light&md=1&fontSize=100px&images=${encodeURIComponent(
+	)}?theme=light&md=1&fontSize=100px&images=${encodeURIComponent(
 		'https://eunjae-dev-svelte.vercel.app/profile.png'
 	)}&widths=400&heights=400`;
 }
