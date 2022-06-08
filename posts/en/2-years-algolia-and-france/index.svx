@@ -1,5 +1,6 @@
 ---
 title: "Two Years at Algolia and in France"
+excerpt: "It's a good signal that I'm in a good place."
 created_at: 2021-03-03T00:00:00.000Z
 lang: en
 featured: true

@@ -1,5 +1,6 @@
 ---
 title: "What could go wrong with `yarn publish`?"
+excerpt: "yarn@v1 has an issue with yarn pack, which you may want to know."
 created_at: 2020-10-02T00:00:00.000Z
 lang: en
 ---

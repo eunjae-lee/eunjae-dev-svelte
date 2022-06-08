@@ -1,5 +1,6 @@
 ---
 title: "dotJS 2019 Recap"
+excerpt: "My impression on the conference, and some random thoughts."
 created_at: 2019-12-14T00:00:00.000Z
 lang: en
 ---

@@ -17,7 +17,7 @@ As I tell her examples, and she asks me questions, we’ve discovered it’s a b
 
 - I feel uncomfortable around a big group of people.
 - I am okay if I am with a tightly coupled small group of friends, even though I’m in a place with lots of people.
-- For example, as I briefly mentioned in [dotJS 2019 Recap](craftdocs://open?blockId=FC6A0A72-446C-4C55-ADF1-82F13D1F7847&spaceId=66b8ce7c-b91c-0810-01dd-0a9d2259d2d0) post, it was quite difficult for me in the conference. When I was by myself in the hall, I was very very uncomfortable.
+- For example, as I briefly mentioned in [dotJS 2019 Recap](/post/en/dotjs-2019) post, it was quite difficult for me in the conference. When I was by myself in the hall, I was very very uncomfortable.
    - She asked me why I think I was uncomfortable.
    - Was it because I was afraid to be seen as a loner? Not sure. Sometimes I go to restaurants alone, and it’s fine. Maybe restaurant is okay because nobody there is supposed to know me, which means there is no social connection or pressure? Perhaps.
    - Was it because I just need a sense of belonging and when I don’t have it, my automatic reaction is anxiety? That’s a good theory.

@@ -1,5 +1,6 @@
 ---
 title: "A Guy Who Buys An Ice Pack Everyday"
+excerpt: "I buy an ice pack. everyday. How come did it happen to me?"
 created_at: 2019-09-24T00:00:00.000Z
 lang: en
 featured: true

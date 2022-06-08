@@ -1,5 +1,6 @@
 ---
 title: "Search with Supabase + Algolia's Autocomplete"
+excerpt: "This post is a sneak peek on Algolia's Autocomplete library as the frontend of Supabase's search funcitonality."
 created_at: 2022-03-28T00:00:00.000Z
 lang: en
 ---

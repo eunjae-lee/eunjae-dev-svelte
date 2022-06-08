@@ -1,5 +1,6 @@
 ---
 title: "Abandoning a Side Project"
+excerpt: "You can see my thought process from why I started it and to why I decided to stop it."
 created_at: 2020-05-02T00:00:00.000Z
 lang: en
 ---

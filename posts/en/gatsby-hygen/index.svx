@@ -1,5 +1,6 @@
 ---
 title: "Create Post on Gatsby with hygen"
+excerpt: "You can automate your process just a little bit futher by having a blog post template and a script to use it."
 created_at: 2019-01-01T00:00:00.000Z
 lang: en
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Add Super Fast Search in Your Gatsby Website"
+excerpt: "This post explains the whole flow from indexing data to building search UI on your Gatsby website."
 created_at: 2019-01-12T00:00:00.000Z
 lang: en
 ---

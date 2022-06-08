@@ -1,5 +1,6 @@
 ---
 title: "Create Social Image in Sanity Studio"
+excerpt: "If you're usig Sanity Studio, you can create social image right inside it."
 created_at: 2020-10-12T00:00:00.000Z
 lang: en
 ---

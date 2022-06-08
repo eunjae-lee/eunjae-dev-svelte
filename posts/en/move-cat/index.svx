@@ -1,5 +1,6 @@
 ---
 title: "How to Move a Cat from Singapore to France"
+excerpt: "Don't be afraid. You'll make it. Your cat will make it."
 created_at: 2019-03-20T00:00:00.000Z
 lang: en
 ---
