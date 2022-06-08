@@ -12,11 +12,15 @@ const postsUrl = `https://eunjae.dev/post`;
 /**
  * @type {import('@sveltejs/kit').RequestHandler}
  */
-export async function get() {
+export async function get({ url }) {
+	const slug = url.searchParams.get('slug');
 	// helper for vscode syntax highlighting
 	const xml = String.raw;
 
-	const posts = getPosts();
+	let posts = getPosts();
+	if (slug) {
+		posts = posts.filter((post) => post.slug.startsWith(slug));
+	}
 
 	return {
 		headers: {

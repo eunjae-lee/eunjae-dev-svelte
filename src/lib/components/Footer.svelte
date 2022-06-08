@@ -29,6 +29,10 @@
 			label: 'Repository',
 			href: 'https://github.com/eunjae-lee/eunjae-dev-svelte',
 		},
+		{
+			label: `RSS (${lang === 'ko' ? 'Korean' : 'English'} only)`,
+			href: `/rss.xml?slug=${encodeURIComponent(`${lang}/`)}`,
+		},
 	];
 </script>
 
