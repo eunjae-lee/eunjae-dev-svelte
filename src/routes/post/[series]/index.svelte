@@ -25,6 +25,7 @@
 
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { PostMeta } from '$lib/types';
+	import { getOgImage } from '$lib/helpers';
 
 	export let title: string;
 	export let description: string;
@@ -32,6 +33,7 @@
 	export let series: string;
 
 	let url = `https://eunjae.dev/post/${series}`;
+	let ogImage = getOgImage({ title });
 </script>
 
 <svelte:head>
@@ -44,14 +46,14 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<!-- <meta property="og:image" content={ogImage} /> -->
+	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content={url} />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={description} />
-	<!-- <meta name="twitter:image" content={ogImage} /> -->
+	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <NavBar lang="en" />

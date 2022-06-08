@@ -1,6 +1,7 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import { getOgImage } from '$lib/helpers';
 	import '../prism-one-dark.css';
 
 	export let title;
@@ -11,6 +12,7 @@
 
 	let url = `https://eunjae.dev${path}`;
 	let formattedDate = new Intl.DateTimeFormat().format(new Date(created_at));
+	let ogImage = getOgImage({ title });
 </script>
 
 <svelte:head>
@@ -23,14 +25,14 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={excerpt} />
-	<!-- <meta property="og:image" content={ogImage} /> -->
+	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content={url} />
 	<meta name="twitter:title" content={title} />
 	<meta name="twitter:description" content={excerpt} />
-	<!-- <meta name="twitter:image" content={ogImage} /> -->
+	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <NavBar {lang} />

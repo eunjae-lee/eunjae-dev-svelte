@@ -21,10 +21,12 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import LinkedCard from '$lib/components/LinkedCard.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
 	import type { LoadEvent } from '@sveltejs/kit';
 
 	export let posts: PostMeta[];
+	let ogImage = getOgImage({ title: 'Posts' });
 </script>
 
 <svelte:head>
@@ -43,7 +45,7 @@
 		property="og:description"
 		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
 	/>
-	<!-- <meta property="og:image" content={ogImage} /> -->
+	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +55,7 @@
 		name="twitter:description"
 		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
 	/>
-	<!-- <meta name="twitter:image" content={ogImage} /> -->
+	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <NavBar lang="en" />

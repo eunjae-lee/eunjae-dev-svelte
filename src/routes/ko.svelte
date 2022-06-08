@@ -21,10 +21,12 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import LinkedCard from '$lib/components/LinkedCard.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
 	import type { LoadEvent } from '@sveltejs/kit';
 
 	export let posts: PostMeta[];
+	let ogImage = getOgImage({ title: '글 목록' });
 </script>
 
 <svelte:head>
@@ -43,7 +45,7 @@
 		property="og:description"
 		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
-	<!-- <meta property="og:image" content={ogImage} /> -->
+	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +55,7 @@
 		name="twitter:description"
 		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
-	<!-- <meta name="twitter:image" content={ogImage} /> -->
+	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <NavBar lang="ko" />
