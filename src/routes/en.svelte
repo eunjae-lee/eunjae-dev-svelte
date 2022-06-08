@@ -150,7 +150,7 @@
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">Series</h2>
 			<ul class="mt-4">
-				{#each series as item (item.path)}
+				{#each series as item (item.url)}
 					<li class="mt-2">
 						<a
 							sveltekit:prefetch
