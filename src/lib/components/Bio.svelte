@@ -7,7 +7,7 @@
 <div class="flex flex-col sm:flex-row items-center gap-8 sm:gap-16">
 	<div class="sm:order-last avatar drop-shadow-xl">
 		<div class="w-48">
-			<img src="/profile.png" class="rounded-full" alt="Profile of Eunjae Lee" />
+			<img src="/profile.jpg" class="rounded-full" alt="Profile of Eunjae Lee" />
 		</div>
 	</div>
 	<div>
