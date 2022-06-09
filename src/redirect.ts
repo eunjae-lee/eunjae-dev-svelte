@@ -2,6 +2,7 @@ export const REDIRECT_MAP: Record<string, string> = {
 	// shortcuts
 	'/in-paris': 'https://eunjae.podia.com/in-paris',
 	'/community': 'https://eunjae.podia.com/community',
+	'/courses': 'https://courses.eunjae.dev',
 
 	'/posts-en': '/post/en',
 	'/posts-ko': '/post/ko',
