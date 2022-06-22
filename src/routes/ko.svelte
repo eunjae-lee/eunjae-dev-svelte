@@ -71,7 +71,7 @@
 		<LinkedCard
 			href="https://courses.eunjae.dev/new-job"
 			title="이직 이야기"
-			description="프랑스 회사를 다니다가 이직을 결심한 계기와 과정, 그리고 그 결과를 있는 그대로 소개합니다."
+			description="프랑스 회사를 다니다가 미국 회사로의 이직을 결심한 계기와 과정, 그리고 그 결과를 자세히 풀어 소개합니다."
 			><div class="alert bg-primary text-primary-content shadow-lg p-2 text-sm">
 				<div class="w-full flex justify-center">
 					<svg
