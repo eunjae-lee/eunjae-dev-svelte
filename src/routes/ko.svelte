@@ -76,16 +76,18 @@
 				<div class="w-full flex justify-center">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
+						class="h-5 w-5"
 						fill="none"
 						viewBox="0 0 24 24"
-						class="stroke-current flex-shrink-0 w-6 h-6"
-						><path
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
-							stroke-width="2"
-							d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-						/></svg
-					>
+							d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+						/>
+					</svg>
 					<span>NEW</span>
 				</div>
 			</div></LinkedCard
@@ -200,20 +202,29 @@
 					href="https://3v7zh2.csb.app/"
 					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
 					rel="noopener noreferrer"
-					target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-						<path stroke-linecap="round" stroke-linejoin="round" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
-					  </svg><span class="ml-1 text-lg opacity-75 hover:opacity-100"
-					  >클로바노트 → SRT 변환기</span
-				  ></a
+					target="_blank"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6 opacity-50"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+						/>
+					</svg><span class="ml-1 text-lg opacity-75 hover:opacity-100"
+						>클로바노트 → SRT 변환기</span
+					></a
 				>
 				<a
 					href="https://codesandbox.io/s/clova-note-to-srt-3v7zh2?file=/src/index.js"
 					rel="noopener noreferrer"
-					target="_blank"><span class="ml-1 text-lg opacity-75 hover:opacity-100"
-					  >(코드)</span
-				  ></a
+					target="_blank"><span class="ml-1 text-lg opacity-75 hover:opacity-100">(코드)</span></a
 				>
-				
 			</li>
 		</ul>
 	</div>
