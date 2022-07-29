@@ -160,7 +160,7 @@
 					</li>
 				{/each}
 			</ul>
-			<a sveltekit:prefetch href="/post/ko" class="-ml-3 mt-2 btn btn-ghost">모든 글 보기 →</a>
+			<a sveltekit:prefetch href="/post/ko" class="-ml-3 mt-2 btn btn-ghost">글 목록 보기 →</a>
 		</div>
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">컨퍼런스 톡</h2>

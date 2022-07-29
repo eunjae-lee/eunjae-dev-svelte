@@ -45,6 +45,8 @@
 	<slot />
 </article>
 
+<slot name="after-article" />
+
 <div class="divider mt-16 mb-8" />
 <Footer {lang} />
 
