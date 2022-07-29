@@ -39,7 +39,7 @@
 
 <article class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl w-full">
 	<slot name="before-title" />
-	<h1 class="">{title}</h1>
+	<h1>{title}</h1>
 	<p class="opacity-75">{formattedDate}</p>
 	<div class="w-full h-4 sm:h-8" />
 	<slot />
@@ -51,5 +51,10 @@
 <style>
 	article :global(pre) {
 		@apply shadow-md;
+	}
+
+	h1 {
+		word-wrap: break-word;
+		word-break: keep-all;
 	}
 </style>
