@@ -1,6 +1,9 @@
 User-agent: yeti
 Disallow: /
 
+User-agent: daumoa
+Disallow: /
+
 User-Agent: *
 Allow: /
 Sitemap: https://eunjae.dev/sitemap.xml
