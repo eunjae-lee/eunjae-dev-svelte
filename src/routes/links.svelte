@@ -6,14 +6,12 @@
 	import Twitter from '$lib/components/icons/Twitter.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
-	import type { PostMeta } from '$lib/types';
 
-	export let posts: PostMeta[];
-	let ogImage = getOgImage({ title: '이은재입니다 👋🏼' });
+	let ogImage = getOgImage({ title: '주요 링크' });
 </script>
 
 <svelte:head>
-	<title>이은재입니다</title>
+	<title>주요 링크</title>
 	<meta
 		name="description"
 		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
@@ -21,9 +19,9 @@
 	<meta name="author" content="이은재" />
 
 	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content="https://eunjae.dev/ko" />
+	<meta property="og:url" content="https://eunjae.dev/links" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="이은재" />
+	<meta property="og:title" content="주요 링크" />
 	<meta
 		property="og:description"
 		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
@@ -33,7 +31,7 @@
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://eunjae.dev/ko" />
-	<meta name="twitter:title" content="이은재" />
+	<meta name="twitter:title" content="주요 링크" />
 	<meta
 		name="twitter:description"
 		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
