@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
+	import Discord from '$lib/components/icons/Discord.svelte';
 	import Email from '$lib/components/icons/Email.svelte';
 	import Globe from '$lib/components/icons/Globe.svelte';
 	import Instagram from '$lib/components/icons/Instagram.svelte';
@@ -50,6 +51,7 @@
 			<a href="https://learnwitheunjae.dev"><Globe /><span>Learn with Eunjae (강좌 사이트)</span></a
 			>
 		</li>
+		<li><a href="https://learnwitheunjae.dev/community"><Discord /><span>Discord</span></a></li>
 		<li><a href="https://mas.to/@eunjae_ko"><Globe /><span>Mastodon (한글 계정)</span></a></li>
 		<li><a href="https://mas.to/@eunjae"><Globe /><span>Mastodon (영문 계정)</span></a></li>
 		<li><a href="mailto:hey@eunjae.dev"><Email /><span>hey@eunjae.dev</span></a></li>
