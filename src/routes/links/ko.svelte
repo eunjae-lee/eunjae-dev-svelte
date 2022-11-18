@@ -39,6 +39,7 @@
 
 <div class="mt-4 p-6">
 	<h2 class="text-2xl font-bold">{title}</h2>
+	<a class="text-xs opacity-50 hover:opacity-75" href="/links/en">If you don't speak Korean →</a>
 
 	<ul class="mt-8 flex flex-col gap-2">
 		<li>
