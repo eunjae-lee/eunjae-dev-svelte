@@ -33,7 +33,7 @@
 	<title>이은재입니다</title>
 	<meta
 		name="description"
-		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
 	<meta name="author" content="이은재" />
 
@@ -43,7 +43,7 @@
 	<meta property="og:title" content="이은재" />
 	<meta
 		property="og:description"
-		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
 	<meta property="og:image" content={ogImage} />
 
@@ -53,7 +53,7 @@
 	<meta name="twitter:title" content="이은재" />
 	<meta
 		name="twitter:description"
-		content="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
 	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
@@ -64,7 +64,7 @@
 	<Bio
 		name="이은재입니다 👋🏼"
 		title="한국에서 자랐고, 싱가포르를 거쳐 프랑스에 자리 잡았습니다."
-		description="RemNote 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
+		description="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
 	/>
 	<h2 class="mt-24 text-2xl font-bold">강좌</h2>
 	<div class="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">

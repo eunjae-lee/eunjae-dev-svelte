@@ -44,7 +44,7 @@
 	<title>Eunjae Lee</title>
 	<meta
 		name="description"
-		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+		content="Web developer at Storyblok by day. Indie hacker by night, working on courses and side projects."
 	/>
 	<meta name="author" content="Eunjae Lee" />
 
@@ -54,7 +54,7 @@
 	<meta property="og:title" content="Eunjae Lee" />
 	<meta
 		property="og:description"
-		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+		content="Web developer at Storyblok by day. Indie hacker by night, working on courses and side projects."
 	/>
 	<meta property="og:image" content={ogImage} />
 
@@ -64,7 +64,7 @@
 	<meta name="twitter:title" content="Eunjae Lee" />
 	<meta
 		name="twitter:description"
-		content="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+		content="Web developer at Storyblok by day. Indie hacker by night, working on courses and side projects."
 	/>
 	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
@@ -75,7 +75,7 @@
 	<Bio
 		name="Eunjae Lee"
 		title="Raised in South Korea, now in France."
-		description="Web developer at RemNote by day. Indie hacker by night, working on courses and side projects."
+		description="Web developer at Storyblok by day. Indie hacker by night, working on courses and side projects."
 	/>
 	<h2 class="mt-24 text-2xl font-bold">Projects</h2>
 	<div class="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
