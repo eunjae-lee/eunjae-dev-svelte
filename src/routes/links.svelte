@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
+	import Email from '$lib/components/icons/Email.svelte';
 	import Globe from '$lib/components/icons/Globe.svelte';
 	import Instagram from '$lib/components/icons/Instagram.svelte';
 	import LinkedIn from '$lib/components/icons/LinkedIn.svelte';
@@ -7,42 +8,36 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
 
-	let ogImage = getOgImage({ title: '주요 링크' });
+	let title = '저에게 연락하고 싶으시다면...';
+	let ogImage = getOgImage({ title });
+	let description =
+		'안녕하세요 이은재입니다. 저에게 연락하고 싶으시다면, 다음 채널들을 사용하시면 됩니다.';
 </script>
 
 <svelte:head>
-	<title>주요 링크</title>
-	<meta
-		name="description"
-		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
-	/>
+	<title>{title}</title>
+	<meta name="description" content={description} />
 	<meta name="author" content="이은재" />
 
 	<!-- Facebook Meta Tags -->
 	<meta property="og:url" content="https://eunjae.dev/links" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="주요 링크" />
-	<meta
-		property="og:description"
-		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
-	/>
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
 	<meta property="og:image" content={ogImage} />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://eunjae.dev/ko" />
-	<meta name="twitter:title" content="주요 링크" />
-	<meta
-		name="twitter:description"
-		content="Storyblok 에서 웹개발자로 일하고 있습니다. 개인 시간에는 사이드 프로젝트와 강좌를 만듭니다."
-	/>
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={ogImage} />
 </svelte:head>
 
 <NavBar lang="ko" />
 
 <div class="mt-4 p-6">
-	<h2 class="text-2xl font-bold">주요 링크</h2>
+	<h2 class="text-2xl font-bold">{title}</h2>
 
 	<ul class="mt-8 flex flex-col gap-2">
 		<li>
@@ -57,6 +52,7 @@
 		</li>
 		<li><a href="https://mas.to/@eunjae_ko"><Globe /><span>Mastodon (한글 계정)</span></a></li>
 		<li><a href="https://mas.to/@eunjae"><Globe /><span>Mastodon (영문 계정)</span></a></li>
+		<li><a href="mailto:hey@eunjae.dev"><Email /><span>hey@eunjae.dev</span></a></li>
 	</ul>
 </div>
 
