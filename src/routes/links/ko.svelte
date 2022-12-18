@@ -43,19 +43,19 @@
 
 	<ul class="mt-8 flex flex-col gap-2">
 		<li>
-			<a href="https://twitter.com/eunjae_lee_ko"><Twitter /><span>트위터 (한글 계정)</span></a>
-		</li>
-		<li><a href="https://twitter.com/eunjae_lee"><Twitter /><span>트위터 (영문 계정)</span></a></li>
-		<li><a href="https://instagram.com/eunjae.dev"><Instagram /><span>인스타그램</span></a></li>
-		<li><a href="https://www.linkedin.com/in/eunjae-lee/"><LinkedIn /><span>링크드인</span></a></li>
-		<li>
 			<a href="https://learnwitheunjae.dev"><Globe /><span>Learn with Eunjae (강좌 사이트)</span></a
 			>
 		</li>
-		<li><a href="https://learnwitheunjae.dev/community"><Discord /><span>Discord</span></a></li>
+		<li><a href="https://learnwitheunjae.dev/community"><Discord /><span>Learn with Eunjae (Discord 커뮤니티)</span></a></li>
 		<li><a href="https://mas.to/@eunjae_ko"><Globe /><span>Mastodon (한글 계정)</span></a></li>
 		<li><a href="https://mas.to/@eunjae"><Globe /><span>Mastodon (영문 계정)</span></a></li>
 		<li><a href="mailto:hey@eunjae.dev"><Email /><span>hey@eunjae.dev</span></a></li>
+		<li><a href="https://instagram.com/eunjae.dev"><Instagram /><span>인스타그램</span></a></li>
+		<li><a href="https://www.linkedin.com/in/eunjae-lee/"><LinkedIn /><span>링크드인</span></a></li>
+		<li>
+			<a href="https://twitter.com/eunjae_lee_ko"><Twitter /><span>트위터 (한글 계정)</span></a>
+		</li>
+		<li><a href="https://twitter.com/eunjae_lee"><Twitter /><span>트위터 (영문 계정)</span></a></li>
 	</ul>
 </div>
 
