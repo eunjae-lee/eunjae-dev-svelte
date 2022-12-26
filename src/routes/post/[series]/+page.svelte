@@ -1,25 +1,3 @@
-<script context="module" lang="ts">
-	import type { LoadEvent } from '@sveltejs/kit';
-	import { SERIES } from '../../../series';
-
-	export function load({ params, props }: LoadEvent) {
-		const { series } = params;
-		if (SERIES[series]) {
-			return {
-				props: {
-					...props,
-					...SERIES[series],
-					series,
-				},
-			};
-		} else {
-			return {
-				status: 404,
-			};
-		}
-	}
-</script>
-
 <script lang="ts">
 	import Footer from '$lib/components/Footer.svelte';
 
@@ -27,10 +5,14 @@
 	import type { PostMeta } from '$lib/types';
 	import { getOgImage } from '$lib/helpers';
 
-	export let title: string;
-	export let description: string;
-	export let posts: PostMeta[];
-	export let series: string;
+	type Data = {
+		title: string;
+		description: string;
+		posts: PostMeta[];
+		series: string;
+	};
+	export let data: Data;
+	let { title, description, posts, series } = data;
 
 	let url = `https://eunjae.dev/post/${series}`;
 	let ogImage = getOgImage({ title });

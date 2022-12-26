@@ -1,21 +1,3 @@
-<script context="module" lang="ts">
-	export async function load({ fetch }: LoadEvent) {
-		const response = await fetch('/post/en', {
-			headers: {
-				accept: 'application/json',
-			},
-		});
-		const posts = (await response.json()).posts.filter((post) => post.meta.featured === true);
-
-		return {
-			status: 200,
-			props: {
-				posts,
-			},
-		};
-	}
-</script>
-
 <script lang="ts">
 	import Bio from '$lib/components/Bio.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -25,7 +7,10 @@
 	import type { PostMeta } from '$lib/types';
 	import type { LoadEvent } from '@sveltejs/kit';
 
-	export let posts: PostMeta[];
+	type Data = {
+		posts: PostMeta[];
+	};
+	export let data: Data;
 	let ogImage = getOgImage({ title: 'Eunjae Lee' });
 
 	let series = [
@@ -120,7 +105,7 @@
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">Featured Posts</h2>
 			<ul class="mt-4">
-				{#each posts as post (post.path)}
+				{#each data.posts as post (post.path)}
 					<li class="mt-2">
 						<a
 							sveltekit:prefetch

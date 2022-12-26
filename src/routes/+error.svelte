@@ -1,23 +1,24 @@
-<script context="module" lang="ts">
-	import type { LoadEvent, LoadOutput } from '@sveltejs/kit';
-	import { REDIRECT_MAP } from '../redirect';
-
-	export function load({ error, status, url }: LoadEvent): LoadOutput {
-		if (status === 404 && REDIRECT_MAP[url.pathname]) {
-			return {
-				status: 307,
-				redirect: REDIRECT_MAP[url.pathname],
-			};
-		}
-		return {
-			props: {
-				status,
-			},
-		};
-	}
-</script>
-
 <script lang="ts">
+	// throw new Error(
+	// 	'@migration task: Replace error load function (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3293209)'
+	// );
+
+	// import type { LoadEvent, LoadOutput } from '@sveltejs/kit';
+	// import { REDIRECT_MAP } from '../redirect';
+
+	// export function load({ error, status, url }: LoadEvent): LoadOutput {
+	// 	if (status === 404 && REDIRECT_MAP[url.pathname]) {
+	// 		return {
+	// 			status: 307,
+	// 			redirect: REDIRECT_MAP[url.pathname],
+	// 		};
+	// 	}
+	// 	return {
+	// 		props: {
+	// 			status,
+	// 		},
+	// 	};
+	// }
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { onMount } from 'svelte';
 

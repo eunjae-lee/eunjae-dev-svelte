@@ -21,14 +21,6 @@ const config = {
 	extensions: ['.svelte', '.svx'],
 	kit: {
 		adapter: adapter(),
-		vite: {
-			// allows vite access to ./posts
-			server: {
-				fs: {
-					allow: ['./posts'],
-				},
-			},
-		},
 	},
 };
 

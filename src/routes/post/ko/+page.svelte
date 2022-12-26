@@ -5,7 +5,8 @@
 	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
 
-	export let posts: PostMeta[];
+	type Data = { posts: PostMeta[] };
+	export let data: Data;
 
 	let title = '글 목록';
 	let url = `https://eunjae.dev/post/ko`;
@@ -37,7 +38,7 @@
 <div class="mt-4 p-6">
 	<h1 class="mt-16 text-4xl sm:text-[3rem] font-bold">글 목록</h1>
 	<ul class="mt-8">
-		{#each posts as post}
+		{#each data.posts as post}
 			<li class="mt-12">
 				<a href={post.path}>
 					<div>

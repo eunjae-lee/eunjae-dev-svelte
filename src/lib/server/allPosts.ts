@@ -1,4 +1,4 @@
-import { browser } from '$app/env';
+import { browser } from '$app/environment';
 import { format } from 'date-fns';
 import { parse } from 'node-html-parser';
 import readingTime from 'reading-time/lib/reading-time.js';
