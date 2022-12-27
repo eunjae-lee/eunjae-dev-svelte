@@ -17,20 +17,27 @@ export async function load({ params }: RequestEvent) {
 		throw svelteKitError(500);
 	}
 
-	const octokit = new Octokit({
-		auth: env.GITHUB_PERSONAL_ACCESS_TOKEN,
-	});
+	let body;
 
-	const issue = await octokit.issues.get({ owner: 'eunjae-lee', repo: 'notes', issue_number });
-	const body = issue?.data?.body || '';
-	if (body) {
-		try {
-			await supabase.from('eunjae_notes').insert({
-				issue_number,
-				body: issue.data.body,
-			});
-		} catch (err) {
-			// ignore this
+	if (data?.[0]) {
+		body = data[0].body;
+	} else {
+		const octokit = new Octokit({
+			auth: env.GITHUB_PERSONAL_ACCESS_TOKEN,
+		});
+
+		const issue = await octokit.issues.get({ owner: 'eunjae-lee', repo: 'notes', issue_number });
+		body = issue?.data?.body || '';
+
+		if (body) {
+			try {
+				await supabase.from('eunjae_notes').insert({
+					issue_number,
+					body: issue.data.body,
+				});
+			} catch (err) {
+				// ignore this
+			}
 		}
 	}
 
@@ -41,7 +48,7 @@ export async function load({ params }: RequestEvent) {
 	}
 
 	return {
-		html_url: issue.data.html_url,
+		html_url: `https://github.com/eunjae-lee/notes/issues/${issue_number}`,
 		body: body.replaceAll(/!\[.+?\]\(.+?\)/g, '').trim(),
 		ogImage,
 	};
