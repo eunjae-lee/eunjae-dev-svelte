@@ -1,28 +1,8 @@
 <script lang="ts">
-	// throw new Error(
-	// 	'@migration task: Replace error load function (https://github.com/sveltejs/kit/discussions/5774#discussioncomment-3293209)'
-	// );
-
-	// import type { LoadEvent, LoadOutput } from '@sveltejs/kit';
-	// import { REDIRECT_MAP } from '../redirect';
-
-	// export function load({ error, status, url }: LoadEvent): LoadOutput {
-	// 	if (status === 404 && REDIRECT_MAP[url.pathname]) {
-	// 		return {
-	// 			status: 307,
-	// 			redirect: REDIRECT_MAP[url.pathname],
-	// 		};
-	// 	}
-	// 	return {
-	// 		props: {
-	// 			status,
-	// 		},
-	// 	};
-	// }
+	import { page } from '$app/stores';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { onMount } from 'svelte';
 
-	export let status: number;
 	let isKorean = false;
 
 	onMount(() => {
@@ -48,10 +28,10 @@
 				d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
 			/></svg
 		>
-		{#if status === 404}
+		{#if $page.status === 404}
 			<span>Page not found.</span>
 		{:else}
-			<span>Error {status}</span>
+			<span>Error {$page.status}</span>
 		{/if}
 	</div>
 	<div>
