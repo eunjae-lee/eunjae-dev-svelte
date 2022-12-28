@@ -26,14 +26,21 @@ export async function load({ params }: RequestEvent) {
 			auth: env.GITHUB_PERSONAL_ACCESS_TOKEN,
 		});
 
-		const issue = await octokit.issues.get({ owner: 'eunjae-lee', repo: 'notes', issue_number });
+		let issue;
+		try {
+			issue = await octokit.issues.get({ owner: 'eunjae-lee', repo: 'notes', issue_number });
+		} catch (err) {
+			if ((err as any).status === 404) {
+				throw svelteKitError(404);
+			}
+		}
 		body = issue?.data?.body || '';
 
 		if (body) {
 			try {
 				await supabase.from('eunjae_notes').insert({
 					issue_number,
-					body: issue.data.body,
+					body,
 				});
 			} catch (err) {
 				// ignore this
