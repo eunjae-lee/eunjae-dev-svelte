@@ -56,7 +56,8 @@ export async function load({ params }: RequestEvent) {
 
 	return {
 		html_url: `https://github.com/eunjae-lee/notes/issues/${issue_number}`,
-		body: body.replaceAll(/!\[.+?\]\(.+?\)/g, '').trim(),
+		body,
+		strippedBody: body.replaceAll(/!\[.+?\]\(.+?\)/g, '').trim(),
 		ogImage,
 	};
 }
