@@ -1,5 +1,6 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
+	import Tag from '$lib/components/icons/Tag.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
 	import '../prism-one-dark.css';
@@ -9,6 +10,7 @@
 	export let created_at;
 	export let lang;
 	export let path;
+	export let tags;
 
 	let url = `https://eunjae.dev${path}`;
 	let formattedDate = new Intl.DateTimeFormat().format(new Date(created_at));
@@ -40,7 +42,16 @@
 <article class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl w-full">
 	<slot name="before-title" />
 	<h1>{title}</h1>
-	<p class="opacity-75">{formattedDate}</p>
+	<p class="opacity-75">
+		<span>{formattedDate}</span>
+		{#if tags && tags.length > 0}
+			<span class="mx-2">·</span>
+			<Tag />
+			{#each tags as tag}
+				<span class="ml-1 mr-3 text-lg">{tag}</span>
+			{/each}
+		{/if}
+	</p>
 	<div class="w-full h-4 sm:h-8" />
 	<slot />
 </article>

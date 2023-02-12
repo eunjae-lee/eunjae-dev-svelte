@@ -1,8 +1,7 @@
 <script>
 	import Base from './_Base.svelte';
-	import { page } from '$app/stores';
 	import { SERIES } from '../series';
-	let slug = $page.url.pathname.split('/')[2];
+	let slug = $$props.layout;
 	// @ts-ignore
 	let title = SERIES[slug].title;
 </script>

@@ -4,6 +4,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { PostMeta } from '$lib/types';
 	import { getOgImage } from '$lib/helpers';
+	import Tag from '$lib/components/icons/Tag.svelte';
 
 	type Data = {
 		title: string;
@@ -48,14 +49,22 @@
 	<ul class="mt-8">
 		{#each posts as post}
 			<li class="mt-12">
-				<a href={post.path}>
-					<div>
+				<div>
+					<a href={post.path}>
 						<h2 class="text-2xl font-bold opacity-90 hover:opacity-100">{post.meta.title}</h2>
-						{#if post.meta.excerpt}
-							<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
-						{/if}
-					</div>
-				</a>
+					</a>
+					{#if post.meta.excerpt}
+						<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
+					{/if}
+					{#if post.meta.tags}
+						<p class="mt-1 text-sm opacity-50">
+							<Tag />
+							<span>
+								{post.meta.tags.join(', ')}
+							</span>
+						</p>
+					{/if}
+				</div>
 			</li>
 		{/each}
 	</ul>

@@ -182,7 +182,7 @@
 		<ul class="mt-4">
 			<li class="mt-2 flex items-start">
 				<a
-					href="/tweets"
+					href="/post/tweet"
 					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
 					rel="noopener noreferrer"
 					target="_blank"

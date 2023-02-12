@@ -6,6 +6,14 @@
 - `/en`: For English speaking audience
 - `/`: redirects to either of them according to [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) header.
 
+## Tags
+
+- community
+- learn
+- tool
+- productivity
+- thought
+
 ## References
 
 - https://github.com/mattjennings/sveltekit-blog-template

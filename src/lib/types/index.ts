@@ -6,6 +6,7 @@ export type PostMeta = {
 		featured?: boolean;
 		lang: 'en' | 'ko';
 		path: string;
+		tags?: string[];
 	};
 	path: string;
 };

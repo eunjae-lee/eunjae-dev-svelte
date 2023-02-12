@@ -1,16 +1,16 @@
 import { error } from '@sveltejs/kit';
 import type { LoadEvent } from '@sveltejs/kit';
-import { SERIES } from '../../../series';
+import { isValidSeries, SERIES } from '../../../series';
 
 export function load({ params, data: props }: LoadEvent) {
 	const { series } = params;
-	if (SERIES[series]) {
-		return {
-			...props,
-			...SERIES[series],
-			series,
-		};
-	} else {
+	if (!isValidSeries(series)) {
 		throw error(404);
 	}
+
+	return {
+		...props,
+		...SERIES[series],
+		series,
+	};
 }

@@ -16,6 +16,7 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           label: 'publish_ko'
           dest: 'posts/ko'
+          extension: '.svx'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update contents'
@@ -30,6 +31,22 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           label: 'publish_en'
           dest: 'posts/en'
+          extension: '.svx'
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'docs: update contents'
+  issue_to_markdown_tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - uses: eunjae-lee/issue-to-markdown@v0
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          label: 'publish_tweet'
+          dest: 'posts/tweet'
+          extension: '.svx'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update contents'
