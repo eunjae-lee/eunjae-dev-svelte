@@ -11,8 +11,9 @@ const config = {
 		mdsvex({
 			layout: {
 				_: './src/layouts/Post.svelte',
-				maison: './src/layouts/Maison.svelte',
-				'mental-health': './src/layouts/MentalHealth.svelte',
+				maison: './src/layouts/Series.svelte',
+				'mental-health': './src/layouts/Series.svelte',
+				tweet: './src/layouts/Series.svelte',
 			},
 			remarkPlugins: [relativeImages],
 		}),

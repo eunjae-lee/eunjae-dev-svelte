@@ -182,6 +182,28 @@
 		<ul class="mt-4">
 			<li class="mt-2 flex items-start">
 				<a
+					href="/tweets"
+					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+					rel="noopener noreferrer"
+					target="_blank"
+					><svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="h-6 w-6 opacity-50"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+						/>
+					</svg><span class="ml-1 text-lg opacity-75 hover:opacity-100">트윗 모음</span></a
+				>
+			</li>
+			<li class="mt-2 flex items-start">
+				<a
 					href="https://3v7zh2.csb.app/"
 					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
 					rel="noopener noreferrer"

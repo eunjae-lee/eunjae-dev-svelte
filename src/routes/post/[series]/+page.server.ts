@@ -1,22 +1,19 @@
 import { error } from '@sveltejs/kit';
 import { getPosts } from '$lib/server/posts';
 import type { RequestEvent } from '@sveltejs/kit/types/internal';
+import { isValidSeries } from '../../../series';
+import { SERIES_FILES } from '../../../series_files';
 
 export async function load({ params }: RequestEvent) {
-	let files: Parameters<typeof getPosts>[0]['files'];
 	const { series } = params;
-	if (series === 'maison') {
-		files = import.meta.glob(`/posts/maison/**/index.svx`);
-	} else if (series === 'mental-health') {
-		files = import.meta.glob(`/posts/mental-health/**/index.svx`);
-	} else {
+	if (!isValidSeries(series)) {
 		throw error(404);
 	}
 
 	return {
 		posts: await getPosts({
-			files,
-			series: params.series,
+			files: SERIES_FILES[series],
+			series,
 		}),
 	};
 }

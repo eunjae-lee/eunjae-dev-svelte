@@ -5,7 +5,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
-	import type { LoadEvent } from '@sveltejs/kit';
+	import { SERIES, type Series } from '../../series';
 
 	type Data = {
 		posts: PostMeta[];
@@ -13,16 +13,10 @@
 	export let data: Data;
 	let ogImage = getOgImage({ title: 'Eunjae Lee' });
 
-	let series = [
-		{
-			title: 'Maison',
-			url: '/post/maison',
-		},
-		{
-			title: 'Mental Health',
-			url: '/post/mental-health',
-		},
-	];
+	const series = Object.keys(SERIES).map((slug) => ({
+		title: SERIES[slug as Series].title,
+		url: `/post/${slug}`,
+	}));
 </script>
 
 <svelte:head>

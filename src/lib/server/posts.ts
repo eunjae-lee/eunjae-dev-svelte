@@ -1,10 +1,10 @@
-import type { PostMeta } from '$lib/types';
+import type { PostMeta, Files } from '$lib/types';
 
 export async function getPosts({
 	files,
 	series,
 }: {
-	files: Record<string, () => Promise<{ metadata: PostMeta['meta'] }>>;
+	files: Files;
 	series: string;
 }): Promise<PostMeta[]> {
 	const entries = Object.entries(files);
