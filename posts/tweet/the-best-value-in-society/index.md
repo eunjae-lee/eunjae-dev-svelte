@@ -3,8 +3,8 @@ created_at: '2023-01-09T22:38:00.000Z'
 lang: 'ko'
 layout: 'tweet'
 slug: 'the-best-value-in-society'
-tags: '
-  - thought'
+tags:
+  - thought
 title: '일을 잘하는 게 최고의 가치?'
 ---
 
