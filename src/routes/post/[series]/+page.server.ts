@@ -16,7 +16,7 @@ export async function load({ params }: RequestEvent) {
 	});
 
 	const tagCountMap = posts.reduce<Record<string, number>>((acc, post) => {
-		post.meta.tags?.forEach((tag) => {
+		(post.meta.tags || []).forEach((tag) => {
 			if (!acc[tag]) {
 				acc[tag] = 0;
 			}
