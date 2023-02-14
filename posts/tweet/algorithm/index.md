@@ -1,10 +1,10 @@
 ---
-title: "알고리즘에 대한 두려움"
+title: '알고리즘에 대한 두려움'
 created_at: 2022-05-12T19:42:00.000Z
 lang: ko
 layout: tweet
 tags:
-  - thought
+  - learn
 ---
 
 VueJS 코어 컨트리뷰터이자 Cypress 대서 일하고 있는 Lachlan 이 릿코드에서 숫자 변환하는 가장 쉽다는 문제로 애먹은 이야기를 올렸네요 ㅎㅎ

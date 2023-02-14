@@ -13,6 +13,8 @@
 - tool
 - productivity
 - thought
+- english
+- culture
 
 ## References
 

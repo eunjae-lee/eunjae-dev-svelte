@@ -66,6 +66,10 @@
 		@apply shadow-md;
 	}
 
+	article :global(p > code) {
+		@apply border border-base-content border-opacity-50 rounded-md font-normal text-primary;
+	}
+
 	h1 {
 		word-wrap: break-word;
 		word-break: keep-all;
