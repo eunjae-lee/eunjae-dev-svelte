@@ -11,6 +11,7 @@
 	export let lang;
 	export let path;
 	export let tags;
+	export let series;
 
 	let url = `https://eunjae.dev${path}`;
 	let formattedDate = new Intl.DateTimeFormat().format(new Date(created_at));
@@ -44,11 +45,14 @@
 	<h1>{title}</h1>
 	<p class="opacity-75">
 		<span>{formattedDate}</span>
-		{#if tags && tags.length > 0}
+		{#if series && tags && tags.length > 0}
 			<span class="mx-2">·</span>
 			<Tag />
 			{#each tags as tag}
-				<span class="ml-1 mr-3 text-lg">{tag}</span>
+				<a
+					href={`/post/${series}/tag/${tag}`}
+					class="opacity-75 hover:opacity-100 uppercase ml-1 mr-3 text-lg">{tag}</a
+				>
 			{/each}
 		{/if}
 	</p>

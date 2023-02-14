@@ -31,3 +31,9 @@ export function setTheme(theme: Theme) {
 // 		return window.matchMedia('(prefers-color-scheme: dark)').matches;
 // 	}
 // }
+
+export function isKoreanBrowser() {
+	return (window.navigator.languages || []).some(
+		(language) => language === 'ko' || language.split('-')[0] === 'ko'
+	);
+}

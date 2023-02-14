@@ -5,17 +5,18 @@
 	import type { Lang, PostMeta } from '$lib/types';
 	import { getOgImage } from '$lib/helpers';
 	import Tag from '$lib/components/icons/Tag.svelte';
+	import Close from '$lib/components/icons/Close.svelte';
 
 	type Data = {
 		title: string;
 		description: string;
+		tag: string;
 		lang: Lang;
 		posts: PostMeta[];
 		series: string;
-		tags: Array<{ name: string; count: number }>;
 	};
 	export let data: Data;
-	let { title, description, lang, posts, series, tags } = data;
+	let { title, description, tag, lang, posts, series } = data;
 
 	let url = `https://eunjae.dev/post/${series}`;
 	let ogImage = getOgImage({ title });
@@ -48,19 +49,15 @@
 	<p class="mt-4 italic opacity-75">
 		{description}
 	</p>
-	<ul class="mt-12">
-		{#each tags as tag}
-			<li class="mr-4 inline-flex items-center">
-				<a
-					href={`/post/tweet/tag/${tag.name}`}
-					class="btn btn-ghost shrink-0 opacity-50 hover:opacity-100"
-					><Tag opacity={75} /><span class="ml-2 mr-1">{tag.name}</span><span
-						class="font-light text-xs">({tag.count})</span
-					></a
-				>
-			</li>
-		{/each}
-	</ul>
+
+	<div class="mt-12">
+		<a href={`/post/${series}`} class="flex items-center btn btn-ghost w-fit">
+			<Tag />
+			<span class="ml-2 mr-1">{tag}</span>
+			<Close />
+		</a>
+	</div>
+
 	<ul class="mt-12">
 		{#each posts as post}
 			<li class="mt-12">
@@ -70,14 +67,6 @@
 					</a>
 					{#if post.meta.excerpt}
 						<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
-					{/if}
-					{#if post.meta.tags}
-						<p class="mt-1 text-sm opacity-50">
-							<Tag />
-							<span>
-								{post.meta.tags.join(', ')}
-							</span>
-						</p>
 					{/if}
 				</div>
 			</li>

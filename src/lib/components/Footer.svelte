@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let lang: 'ko' | 'en';
+	import type { Lang } from '$lib/types';
+
+	export let lang: Lang;
 
 	let footerLinkGroup1 = [
 		{

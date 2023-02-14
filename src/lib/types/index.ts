@@ -14,3 +14,5 @@ export type PostMeta = {
 export type Theme = 'light' | 'dark' | 'system';
 
 export type Files = Record<string, () => Promise<{ metadata: PostMeta['meta'] }>>;
+
+export type Lang = 'en' | 'ko';

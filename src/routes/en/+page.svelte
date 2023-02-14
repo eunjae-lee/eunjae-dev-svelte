@@ -5,7 +5,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
-	import { SERIES, type Series } from '../../series';
+	import { SERIES, type SeriesType } from '../../series';
 
 	type Data = {
 		posts: PostMeta[];
@@ -14,7 +14,7 @@
 	let ogImage = getOgImage({ title: 'Eunjae Lee' });
 
 	const series = Object.keys(SERIES).map((slug) => ({
-		title: SERIES[slug as Series].title,
+		title: SERIES[slug as SeriesType].title,
 		url: `/post/${slug}`,
 	}));
 </script>

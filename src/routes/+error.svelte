@@ -1,14 +1,13 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import NavBar from '$lib/components/NavBar.svelte';
+	import { isKoreanBrowser } from '$lib/helpers';
 	import { onMount } from 'svelte';
 
 	let isKorean = false;
 
 	onMount(() => {
-		isKorean = (window.navigator.languages || []).some(
-			(language) => language === 'ko' || language.split('-')[0] === 'ko'
-		);
+		isKorean = isKoreanBrowser();
 	});
 </script>
 

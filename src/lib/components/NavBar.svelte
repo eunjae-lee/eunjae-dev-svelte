@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { Theme } from '$lib/types';
+	import type { Lang } from '$lib/types';
 	import { theme } from '$lib/stores';
 	import { setTheme } from '$lib/helpers';
 
 	import EngKor from './EngKor.svelte';
 	import KorEng from './KorEng.svelte';
 
-	export let lang: 'en' | 'ko';
+	export let lang: Lang;
 
 	let isEnglish = lang === 'en';
 	let home: string = isEnglish ? 'Home' : '처음으로';
