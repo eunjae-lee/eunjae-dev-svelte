@@ -25,13 +25,13 @@ export function getPosts({ page = 1, limit }: { page?: number; limit?: number } 
 }
 
 // Get all posts and add metadata
-const posts = Object.entries(import.meta.globEager('/posts/**/*.svx'))
+const posts = Object.entries(import.meta.globEager('/posts/**/*.md'))
 	.map(([filepath, post]) => {
 		return {
 			...post.metadata,
 
 			// generate the slug from the file path
-			slug: filepath.replace(/(\/index)?\.svx$/, '').replace(/^\/posts\//, ''),
+			slug: filepath.replace(/(\/index)?\.md$/, '').replace(/^\/posts\//, ''),
 
 			// whether or not this file is `my-post.md` or `my-post/index.md`
 			// (needed to do correct dynamic import in posts/[slug].svelte)

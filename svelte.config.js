@@ -9,6 +9,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [
 		mdsvex({
+			extensions: ['.md'],
 			layout: {
 				_: './src/layouts/Post.svelte',
 				maison: './src/layouts/Series.svelte',
@@ -19,7 +20,7 @@ const config = {
 		}),
 		preprocess({ postcss: true }),
 	],
-	extensions: ['.svelte', '.svx'],
+	extensions: ['.svelte', '.md'],
 	kit: {
 		adapter: adapter(),
 	},
