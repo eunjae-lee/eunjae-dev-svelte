@@ -46,7 +46,11 @@
 			<a href="https://learnwitheunjae.dev"><Globe /><span>Learn with Eunjae (강좌 사이트)</span></a
 			>
 		</li>
-		<li><a href="https://learnwitheunjae.dev/community"><Discord /><span>Learn with Eunjae (Discord 커뮤니티)</span></a></li>
+		<li>
+			<a href="https://learnwitheunjae.dev/community"
+				><Discord /><span>Learn with Eunjae (Discord 커뮤니티)</span></a
+			>
+		</li>
 		<li><a href="https://mas.to/@eunjae_ko"><Globe /><span>Mastodon (한글 계정)</span></a></li>
 		<li><a href="https://mas.to/@eunjae"><Globe /><span>Mastodon (영문 계정)</span></a></li>
 		<li><a href="mailto:hey@eunjae.dev"><Email /><span>hey@eunjae.dev</span></a></li>

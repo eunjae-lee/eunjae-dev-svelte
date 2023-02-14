@@ -5,7 +5,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
 	import type { PostMeta } from '$lib/types';
-	import type { LoadEvent } from '@sveltejs/kit';
+	import { Zap, FileText, Newspaper } from 'lucide-svelte';
 
 	type Data = { posts: PostMeta[] };
 	export let data: Data;
@@ -57,20 +57,7 @@
 			description="프랑스 회사를 다니다가 미국 회사로의 이직을 결심한 계기와 과정, 그리고 그 결과를 자세히 풀어 소개합니다."
 			><div class="alert bg-primary text-primary-content shadow-lg p-2 text-sm">
 				<div class="w-full flex justify-center">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-5 w-5"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-						/>
-					</svg>
+					<Zap size={14} />
 					<span>NEW</span>
 				</div>
 			</div></LinkedCard
@@ -122,22 +109,9 @@
 					<li class="mt-2">
 						<a
 							sveltekit:prefetch
-							class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+							class="inline-flex items-center underline underline-offset-8 decoration-2"
 							href={post.path}
-							><svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="h-6 w-6 opacity-50"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-								/>
-							</svg>
+							><FileText class="opacity-75" />
 							<span class="ml-1 text-lg opacity-75 hover:opacity-100">{post.meta.title}</span></a
 						>
 					</li>
@@ -151,24 +125,11 @@
 				<li class="mt-2">
 					<a
 						sveltekit:prefetch
-						class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+						class="inline-flex items-center underline underline-offset-8 decoration-2"
 						rel="noopener noreferrer"
 						target="_blank"
 						href="https://www.youtube.com/watch?v=JbzdDYo2w_I"
-						><svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-6 w-6 opacity-50"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							stroke-width="2"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-							/>
-						</svg>
+						><Newspaper class="opacity-75" />
 						<span class="ml-1 text-lg opacity-75 hover:opacity-100"
 							>오픈 소스 라이브러리를 배포해봅시다</span
 						></a
@@ -183,29 +144,18 @@
 			<li class="mt-2 flex items-start">
 				<a
 					href="/post/tweet"
-					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+					class="inline-flex items-center underline underline-offset-8 decoration-2"
 					rel="noopener noreferrer"
 					target="_blank"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6 opacity-50"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-						/>
-					</svg><span class="ml-1 text-lg opacity-75 hover:opacity-100">트윗 모음</span></a
+				>
+					<Newspaper class="opacity-75" />
+					<span class="ml-1 text-lg opacity-75 hover:opacity-100">트윗 모음</span></a
 				>
 			</li>
-			<li class="mt-2 flex items-start">
+			<!-- <li class="mt-2 flex items-start">
 				<a
 					href="https://3v7zh2.csb.app/"
-					class="inline-flex items-center border-b hover:border-b-2 border-gray-200 hover:border-gray-300 dark:border-gray-500 dark:hover:border-gray-400"
+					class="inline-flex items-center underline underline-offset-8 decoration-2"
 					rel="noopener noreferrer"
 					target="_blank"
 					><svg
@@ -230,7 +180,7 @@
 					rel="noopener noreferrer"
 					target="_blank"><span class="ml-1 text-lg opacity-75 hover:opacity-100">(코드)</span></a
 				>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 	<form
