@@ -49,7 +49,7 @@
 		{description}
 	</p>
 
-	<div class="mt-12">
+	<div class="mt-12 -ml-4">
 		<a href={`/post/${series}`} class="flex items-center btn btn-ghost w-fit">
 			<Tag size={14} />
 			<span class="ml-2 mr-1">{tag}</span>

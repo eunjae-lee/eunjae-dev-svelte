@@ -48,7 +48,7 @@
 	<p class="mt-4 italic opacity-75">
 		{description}
 	</p>
-	<ul class="mt-12">
+	<ul class="mt-12 -ml-4">
 		{#each tags as tag}
 			<li class="mr-4 inline-flex items-center">
 				<a
