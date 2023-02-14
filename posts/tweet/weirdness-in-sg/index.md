@@ -4,7 +4,7 @@ lang: "ko"
 layout: "tweet"
 slug: "weirdness-in-sg"
 tags: 
-  - "thought"
+  - "culture"
 title: "싱가포르에서의 의아함"
 ---
 
@@ -23,3 +23,4 @@ title: "싱가포르에서의 의아함"
 신의 점잖은 꾸중 한마디에 바들바들 떨며 자살로 속죄를 구하려 한 어리석은 자의 이야기를 경전에서 가져다 읊는 듯한 말투, 표정이어서 소름 돋았음.
 
 https://mobile.twitter.com/eunjae_lee_ko/status/1614404655546617857
+
