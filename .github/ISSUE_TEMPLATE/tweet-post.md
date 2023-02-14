@@ -6,7 +6,7 @@ labels: ''
 assignees: ''
 ---
 ---
-created_at:
+created_at: ''
 slug:
 lang: ko
 layout: tweet

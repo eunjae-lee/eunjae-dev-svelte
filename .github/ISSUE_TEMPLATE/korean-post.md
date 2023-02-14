@@ -7,7 +7,7 @@ assignees: ''
 ---
 ---
 excerpt:
-created_at:
+created_at: ''
 featured: false
 lang: ko
 ---
