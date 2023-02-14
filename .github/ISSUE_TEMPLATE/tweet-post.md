@@ -7,6 +7,7 @@ assignees: ''
 ---
 ---
 created_at:
+slug:
 lang: ko
 layout: tweet
 tags:
