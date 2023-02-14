@@ -1,9 +1,10 @@
 ---
-created_at: "2023-01-09T22:38:00.000Z"
+created_at: "Mon Jan 09 2023 22:38:00 GMT+0000 (Coordinated Universal Time)"
 lang: "ko"
 layout: "tweet"
 slug: "the-best-value-in-society"
-tags: "thought"
+tags: "
+  - thought"
 title: "일을 잘하는 게 최고의 가치?"
 ---
 
