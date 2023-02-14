@@ -1,5 +1,5 @@
 ---
-created_at: "Mon Jan 09 2023 22:38:00 GMT+0000 (Coordinated Universal Time)"
+created_at: "2023-01-09T22:38:00.000Z"
 lang: "ko"
 layout: "tweet"
 slug: "the-best-value-in-society"
