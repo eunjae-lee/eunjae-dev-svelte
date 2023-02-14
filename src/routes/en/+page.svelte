@@ -14,10 +14,13 @@
 	export let data: Data;
 	let ogImage = getOgImage({ title: 'Eunjae Lee' });
 
-	const series = Object.keys(SERIES).map((slug) => ({
-		title: SERIES[slug as SeriesType].title,
-		url: `/post/${slug}`,
-	}));
+	const series = Object.keys(SERIES)
+		.map((slug) => ({
+			title: SERIES[slug as SeriesType].title,
+			url: `/post/${slug}`,
+			lang: SERIES[slug as SeriesType].lang,
+		}))
+		.filter((series) => series.lang === 'en');
 </script>
 
 <svelte:head>
