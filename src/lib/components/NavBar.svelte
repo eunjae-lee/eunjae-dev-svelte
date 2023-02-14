@@ -29,9 +29,7 @@
 				<li><a class="opacity-50 hover:opacity-75" href={`/${lang}`}>{home}</a></li>
 				{#each menuItems as item (item.label)}
 					<li>
-						<a sveltekit:prefetch class="opacity-50 hover:opacity-75" href={item.href}
-							>{item.label}</a
-						>
+						<a class="opacity-50 hover:opacity-75" href={item.href}>{item.label}</a>
 					</li>
 				{/each}
 				<li tabindex="0">
@@ -71,17 +69,13 @@
 					</button>
 					<ul class="p-2 bg-base-200">
 						<li>
-							<a
-								sveltekit:prefetch
-								class={`${isEnglish ? 'opacity-75' : 'opacity-50'} hover:opacity-75`}
-								href="/en">English</a
+							<a class={`${isEnglish ? 'opacity-75' : 'opacity-50'} hover:opacity-75`} href="/en"
+								>English</a
 							>
 						</li>
 						<li>
-							<a
-								sveltekit:prefetch
-								class={`${isEnglish ? 'opacity-50' : 'opacity-75'} hover:opacity-75`}
-								href="/ko">Korean</a
+							<a class={`${isEnglish ? 'opacity-50' : 'opacity-75'} hover:opacity-75`} href="/ko"
+								>Korean</a
 							>
 						</li>
 					</ul>
@@ -98,8 +92,7 @@
 		<ul class="menu menu-horizontal p-0">
 			{#each menuItems as item (item.label)}
 				<li>
-					<a sveltekit:prefetch class="opacity-50 hover:opacity-75" href={item.href}>{item.label}</a
-					>
+					<a class="opacity-50 hover:opacity-75" href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 
@@ -150,14 +143,12 @@
 				<ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-28">
 					<li>
 						<a
-							sveltekit:prefetch
 							class={`${isEnglish ? 'opacity-75' : 'opacity-50'} hover:opacity-75 justify-center`}
 							href="/en">English</a
 						>
 					</li>
 					<li>
 						<a
-							sveltekit:prefetch
 							class={`${isEnglish ? 'opacity-50' : 'opacity-75'} hover:opacity-75 justify-center`}
 							href="/ko">Korean</a
 						>

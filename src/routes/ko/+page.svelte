@@ -108,7 +108,6 @@
 				{#each data.posts as post (post.path)}
 					<li class="mt-2">
 						<a
-							sveltekit:prefetch
 							class="inline-flex items-center underline underline-offset-8 decoration-2"
 							href={post.path}
 							><FileText class="opacity-75" />
@@ -117,14 +116,13 @@
 					</li>
 				{/each}
 			</ul>
-			<a sveltekit:prefetch href="/post/ko" class="-ml-3 mt-2 btn btn-ghost">글 목록 보기 →</a>
+			<a href="/post/ko" class="-ml-3 mt-2 btn btn-ghost">글 목록 보기 →</a>
 		</div>
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">컨퍼런스 톡</h2>
 			<ul class="mt-4">
 				<li class="mt-2">
 					<a
-						sveltekit:prefetch
 						class="inline-flex items-center underline underline-offset-8 decoration-2"
 						rel="noopener noreferrer"
 						target="_blank"

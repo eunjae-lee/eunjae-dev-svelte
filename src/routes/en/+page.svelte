@@ -106,7 +106,6 @@
 				{#each data.posts as post (post.path)}
 					<li class="mt-2">
 						<a
-							sveltekit:prefetch
 							class="inline-flex items-center underline underline-offset-8 decoration-2"
 							href={post.path}
 							><FileText class="opacity-75" />
@@ -115,7 +114,7 @@
 					</li>
 				{/each}
 			</ul>
-			<a sveltekit:prefetch href="/post/en" class="-ml-3 mt-2 btn btn-ghost">View All Posts →</a>
+			<a href="/post/en" class="-ml-3 mt-2 btn btn-ghost">View All Posts →</a>
 		</div>
 		<div class="basis-1/2">
 			<h2 class="text-2xl font-bold">Series</h2>
@@ -123,7 +122,6 @@
 				{#each series as item (item.url)}
 					<li class="mt-2">
 						<a
-							sveltekit:prefetch
 							class="inline-flex items-center underline underline-offset-8 decoration-2"
 							href={item.url}
 							><Newspaper class="opacity-75" />
