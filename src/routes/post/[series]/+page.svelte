@@ -4,7 +4,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { Lang, PostMeta } from '$lib/types';
 	import { getOgImage } from '$lib/helpers';
-	import Tag from '$lib/components/icons/Tag.svelte';
+	import { Tag } from 'lucide-svelte';
 
 	type Data = {
 		title: string;
@@ -54,7 +54,7 @@
 				<a
 					href={`/post/tweet/tag/${tag.name}`}
 					class="btn btn-ghost shrink-0 opacity-50 hover:opacity-100"
-					><Tag opacity={75} /><span class="ml-2 mr-1">{tag.name}</span><span
+					><Tag size={14} opacity={75} /><span class="ml-2 mr-1">{tag.name}</span><span
 						class="font-light text-xs">({tag.count})</span
 					></a
 				>
@@ -72,9 +72,9 @@
 						<p class="mt-2 opacity-75">{post.meta.excerpt}</p>
 					{/if}
 					{#if post.meta.tags}
-						<p class="mt-1 text-sm opacity-50">
-							<Tag />
-							<span>
+						<p class="mt-1 text-sm opacity-50 flex gap-1 items-center">
+							<Tag size={12} />
+							<span class="uppercase text-xs">
 								{post.meta.tags.join(', ')}
 							</span>
 						</p>

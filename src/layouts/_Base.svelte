@@ -1,8 +1,8 @@
 <script>
 	import Footer from '$lib/components/Footer.svelte';
-	import Tag from '$lib/components/icons/Tag.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { getOgImage } from '$lib/helpers';
+	import { Tag } from 'lucide-svelte';
 	import '../prism-one-dark.css';
 
 	export let title;
@@ -43,15 +43,15 @@
 <article class="mt-16 p-6 prose prose-lg sm:prose-xl md:prose-2xl w-full">
 	<slot name="before-title" />
 	<h1>{title}</h1>
-	<p class="opacity-75">
+	<p class="opacity-75 text-lg flex items-center">
 		<span>{formattedDate}</span>
 		{#if series && tags && tags.length > 0}
 			<span class="mx-2">·</span>
-			<Tag />
+			<Tag size={14} />
 			{#each tags as tag}
 				<a
 					href={`/post/${series}/tag/${tag}`}
-					class="opacity-75 hover:opacity-100 uppercase ml-1 mr-3 text-lg">{tag}</a
+					class="opacity-75 hover:opacity-100 uppercase ml-1 mr-3">{tag}</a
 				>
 			{/each}
 		{/if}

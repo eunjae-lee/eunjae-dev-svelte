@@ -4,7 +4,7 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import type { Lang, PostMeta } from '$lib/types';
 	import { getOgImage } from '$lib/helpers';
-	import Tag from '$lib/components/icons/Tag.svelte';
+	import { Tag } from 'lucide-svelte';
 	import Close from '$lib/components/icons/Close.svelte';
 
 	type Data = {
@@ -52,7 +52,7 @@
 
 	<div class="mt-12">
 		<a href={`/post/${series}`} class="flex items-center btn btn-ghost w-fit">
-			<Tag />
+			<Tag size={14} />
 			<span class="ml-2 mr-1">{tag}</span>
 			<Close />
 		</a>
