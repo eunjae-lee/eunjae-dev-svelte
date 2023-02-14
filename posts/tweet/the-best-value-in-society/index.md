@@ -1,11 +1,11 @@
 ---
-created_at: "Mon Jan 09 2023 22:38:00 GMT+0000 (Coordinated Universal Time)"
-lang: "ko"
-layout: "tweet"
-slug: "the-best-value-in-society"
-tags: "
-  - thought"
-title: "일을 잘하는 게 최고의 가치?"
+created_at: '2023-01-09T22:38:00.000Z'
+lang: 'ko'
+layout: 'tweet'
+slug: 'the-best-value-in-society'
+tags: '
+  - thought'
+title: '일을 잘하는 게 최고의 가치?'
 ---
 
 > 일잘러가 꿈인 사회. 일이 정체성인 문화에 길들여진 이들에게 코로나는 일과 삶 돌아보는 계기 됐다. 나는 무엇으로 어떻게 기억되고픈가. 어떻게 하면 지금 하는 일 이상의 나로 커나갈 수 있을까. 지금 일 이상의 의미를 주는 것은 무엇인가. 다른 생각이 전진의 첫걸음.
