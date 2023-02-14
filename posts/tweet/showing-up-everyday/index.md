@@ -4,7 +4,7 @@ lang: "ko"
 layout: "tweet"
 slug: "showing-up-everyday"
 tags: 
-  - "thought"
+  - "productivity"
 title: "꾸준함"
 ---
 
