@@ -3,7 +3,9 @@ created_at: "2023-01-16T22:38:00.000Z"
 lang: "ko"
 layout: "tweet"
 slug: "how-long-before-applying"
-tags: "null"
+tags: 
+  - "learn"
+  - "job"
 title: "지원하기 전에 얼만큼 공부해야 할지"
 ---
 
