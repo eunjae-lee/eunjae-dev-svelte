@@ -1,5 +1,5 @@
 ---
-created_at: "2023-01-08T10-27:00.000Z"
+created_at: "2023-01-08T10:27:00.000Z"
 slug: "canada-citizenship"
 lang: "ko"
 layout: "tweet"
