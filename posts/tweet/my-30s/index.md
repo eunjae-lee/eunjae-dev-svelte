@@ -19,4 +19,4 @@ title: "내 30대의 즐거움"
 
 이게 무슨 뜻이냐면, 내 멘탈에 안전용 잠금장치가 다 걸어잠겨 있었는데, 평생 무서워서 잠궈놨던 거임. 근데 이제 뭐가 무슨 기능인지 알게 되니까, 언락을 해볼 여지와 용기가 생겼음. 평생 써본 적 없는 기능이 나한테 있었다는 걸 발견한 기쁨과 설렘. 내 40대는 어떨지 기대됨. (아직 아님)
 
-https://twitter.com/eunjae_lee_ko/status/1622351215764934662?s=46&t=NiZOoVevIiyr4SbgodCioA
+https://twitter.com/eunjae_lee_ko/status/1622351215764934662
