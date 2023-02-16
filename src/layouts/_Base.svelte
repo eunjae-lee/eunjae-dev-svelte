@@ -74,6 +74,10 @@
 		@apply border border-base-content border-opacity-50 rounded-md font-normal text-primary;
 	}
 
+	article :global(p > a) {
+		@apply w-full truncate inline-block;
+	}
+
 	h1 {
 		word-wrap: break-word;
 		word-break: keep-all;
