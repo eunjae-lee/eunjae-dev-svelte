@@ -3,6 +3,9 @@
 	import '../app.css';
 	import { theme } from '$lib/stores';
 	import { setTheme } from '$lib/helpers';
+	import { beforeNavigate, afterNavigate } from '$app/navigation';
+	import progress from 'nprogress';
+	import 'nprogress/nprogress.css';
 
 	onMount(() => {
 		if ($theme === undefined) {
@@ -17,6 +20,14 @@
 		if ($theme && ['light', 'dark', 'system'].includes($theme)) {
 			setTheme($theme);
 		}
+	});
+
+	beforeNavigate(() => {
+		progress.start();
+	});
+
+	afterNavigate(() => {
+		progress.done();
 	});
 </script>
 
