@@ -1,5 +1,5 @@
 ---
-created_at: "2022-10-30T08:110:00.000Z"
+created_at: "2022-10-30T08:11:00.000Z"
 slug: "trash-talk-from-others"
 lang: "ko"
 layout: "tweet"
