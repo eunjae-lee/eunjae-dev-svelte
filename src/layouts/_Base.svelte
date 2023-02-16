@@ -75,7 +75,7 @@
 	}
 
 	article :global(p > a) {
-		@apply w-full truncate inline-block;
+		@apply break-all;
 	}
 
 	h1 {
