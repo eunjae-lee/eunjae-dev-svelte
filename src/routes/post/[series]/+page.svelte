@@ -50,10 +50,10 @@
 	</p>
 	<ul class="mt-12 -ml-4">
 		{#each tags as tag}
-			<li class="mr-4 inline-flex items-center">
+			<li class="mr-1 inline-flex items-center">
 				<a
 					href={`/post/tweet/tag/${tag.name}`}
-					class="btn btn-ghost shrink-0 opacity-50 hover:opacity-100"
+					class="btn btn-ghost btn-sm shrink-0 opacity-50 hover:opacity-100"
 					><Tag size={14} opacity={75} /><span class="ml-2 mr-1">{tag.name}</span><span
 						class="font-light text-xs">({tag.count})</span
 					></a
