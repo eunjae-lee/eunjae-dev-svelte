@@ -16,7 +16,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           label: 'publish_ko'
           dest: 'posts/ko'
-          extension: '.md'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update contents'
@@ -31,7 +30,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           label: 'publish_en'
           dest: 'posts/en'
-          extension: '.md'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update contents'
@@ -46,7 +44,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           label: 'publish_tweet'
           dest: 'posts/tweet'
-          extension: '.md'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'docs: update contents'
