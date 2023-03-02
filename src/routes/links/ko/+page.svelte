@@ -60,6 +60,7 @@
 			<a href="https://twitter.com/eunjae_lee_ko"><Twitter /><span>트위터 (한글 계정)</span></a>
 		</li>
 		<li><a href="https://twitter.com/eunjae_lee"><Twitter /><span>트위터 (영문 계정)</span></a></li>
+		<li><a href="/post/tweet"><Twitter /><span>트윗 모음</span></a></li>
 	</ul>
 </div>
 
