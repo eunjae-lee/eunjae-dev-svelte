@@ -5,9 +5,9 @@ title: ''
 labels: ''
 assignees: ''
 ---
+DELETE THIS LINE
 ---
 excerpt:
-created_at: ''
 featured: false
 lang: ko
 ---
