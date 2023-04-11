@@ -7,6 +7,7 @@ assignees: ''
 ---
 DELETE THIS LINE
 ---
+slug:
 excerpt:
 lang: en
 featured: false
